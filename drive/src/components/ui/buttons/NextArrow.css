@@ -1,0 +1,12 @@
+.NextArrow,
+.BackArrow {
+	fill: var(--white);
+	cursor: pointer;
+	transition: transform 150ms, fill 150ms;
+}
+
+.NextArrow:hover,
+.BackArrow:hover {
+	fill: var(--primary-green);
+	transform: scale(1.25);
+}

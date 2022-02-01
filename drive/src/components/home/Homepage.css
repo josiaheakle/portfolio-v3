@@ -1,0 +1,21 @@
+#Homepage {
+	width: 100vw;
+	min-height: 100vh;
+	background-color: var(--white);
+}
+
+.Section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	z-index: 5;
+}
+
+.Section > .heading {
+	color: var(--white);
+	z-index: 5;
+}

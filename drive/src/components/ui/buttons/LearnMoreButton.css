@@ -1,0 +1,36 @@
+.LearnMoreButtonContainer {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	font-family: var(--header-font);
+	font-size: 1rem;
+	color: var(--white);
+	font-weight: bold;
+	width: fit-content;
+	transition: color 250ms, transform 250ms, font-size 250ms;
+	z-index: 10;
+}
+
+.LearnMoreButton {
+	position: relative;
+	transition: transform 250ms ease;
+	width: 5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+	.LearnMoreButton {
+		width: 3rem;
+	}
+}
+.LearnMoreButton.isHover {
+	transform: translateY(25%) scale(125%);
+}
+
+.LearnMoreButtonContainer.isHover {
+	color: var(--white);
+	font-size: 1.2rem;
+
+	/* transform: scale(110%); */
+}

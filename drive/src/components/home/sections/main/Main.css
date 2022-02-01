@@ -1,0 +1,81 @@
+#Main {
+	background-color: var(--white);
+}
+
+#Hero {
+	padding-left: 20vw;
+	padding-right: 20vw;
+	width: 60vw;
+	height: 50vh;
+}
+
+.wave-background-container.main {
+	width: 100vw;
+	height: 16rem;
+	position: absolute;
+	bottom: 0;
+}
+
+#learn-more-button-container {
+	display: flex;
+	position: absolute;
+	width: 100vw;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	bottom: 3rem;
+}
+
+#learn-more-button-container.mobile {
+	bottom: 5rem;
+}
+
+#MainCards {
+	padding-left: 10vw;
+	padding-right: 10vw;
+	width: 80vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: flex-end;
+	position: absolute;
+	bottom: 0;
+}
+
+.MainCard {
+	font-family: var(--header-font);
+	font-size: 1.2rem;
+	color: var(--white);
+	font-weight: bold;
+	bottom: 2rem;
+	border-radius: 10px;
+	width: 18vw;
+	padding: 2rem;
+}
+
+.MainCard.one {
+	background-color: var(--primary-green);
+	height: 16rem;
+
+	z-index: 3;
+}
+
+.MainCard.two {
+	background-color: var(--contrast-blue);
+	height: 15rem;
+
+	z-index: 5;
+}
+
+.MainCard.three {
+	background-color: var(--primary-blue);
+	height: 14rem;
+
+	z-index: 7;
+}
+
+@media only screen and (max-width: 1024px) {
+	.wave-background-container.main {
+		height: 12rem;
+	}
+}

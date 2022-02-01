@@ -1,0 +1,39 @@
+button.Button {
+	cursor: pointer;
+	font-family: var(--header-font);
+	outline: none;
+	border: 2px solid var(--primary-green);
+	padding: 0.75rem;
+	border-radius: 10px;
+	font-size: 1rem;
+	font-weight: bold;
+	transition: color 250ms, transform 250ms, background-color 250ms;
+	color: var(--primary-blue);
+	background-color: var(--white);
+	height: fit-content;
+	width: fit-content;
+}
+
+button.green.Button {
+	border: 2px solid var(--primary-blue);
+	color: var(--primary-green);
+}
+
+button.green.Button:hover {
+	background-color: var(--primary-blue);
+	color: var(--white);
+	transform: scale(110%);
+}
+
+button.Button:hover {
+	background-color: var(--primary-green);
+	color: var(--white);
+	transform: scale(110%);
+}
+
+@media only screen and (max-width: 1024px) {
+	button.Button {
+		padding: 0.5rem;
+		margin-bottom: 1rem;
+	}
+}
