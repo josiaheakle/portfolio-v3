@@ -5,7 +5,7 @@ import React, { useState } from "react";
 
 // components
 import { Navbar } from "./Navbar";
-import { DriveLogo } from "../icons/DriveLogo";
+import LogoIcon from "../../../assets/icon.png";
 
 // hooks
 import { useIsMobile } from "../../../hooks/ReactiveHooks";
@@ -78,7 +78,11 @@ export const Header: React.FC<HeaderProps> = ({ pages, hidden }) => {
 			} ${!isSmall ? "large" : ""} ${isOpen ? "mobile-open" : ""}`}
 		>
 			<a className="header-container" href="/">
-				<DriveLogo />
+				<img
+					className={`HeaderLogo`}
+					src={LogoIcon}
+					alt="Josiah Eakle Development"
+				/>
 				<span className="header-text-container">
 					<h3 className="main-header">Josiah Eakle</h3>
 					<h5

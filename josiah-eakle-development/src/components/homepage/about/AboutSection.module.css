@@ -1,0 +1,10 @@
+.About {
+	background-color: var(--primary-blue);
+}
+
+@media only screen and (min-width: 1024px) {
+	.About {
+		pointer-events: none;
+		background-color: transparent;
+	}
+}

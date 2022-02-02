@@ -7,6 +7,13 @@
 	background-color: var(--primary-green);
 }
 
+@media only screen and (min-width: 1024px) {
+	#Contact {
+		background-color: transparent;
+		pointer-events: none;
+	}
+}
+
 .wave-background-container.contact {
 	width: 100vw;
 	height: 100px;
@@ -40,6 +47,8 @@
 }
 
 #contact-form {
+	pointer-events: auto;
+
 	display: flex;
 	flex-direction: column;
 }
@@ -95,7 +104,7 @@
 	align-content: space-between;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
 	#ContactCard {
 		width: calc(90vw - 4rem);
 		max-width: 30rem;

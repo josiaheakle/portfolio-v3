@@ -1,16 +1,15 @@
-import { title } from "process";
 import * as React from "react";
 
 import { animated, useSpring } from "react-spring";
 
 import "./Hero.css";
 
-interface HeroProps {
+interface HeroProps extends React.HTMLProps<HTMLDivElement> {
 	title: string;
 	subtitle: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ title, subtitle }) => {
+const Hero: React.FC<HeroProps> = ({ title, subtitle, ...props }) => {
 	const subtitleProps = useSpring({
 		to: { opacity: 1 },
 		from: { opacity: 0 },
@@ -25,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle }) => {
 	});
 
 	return (
-		<div id="Hero">
+		<div id="Hero" {...props}>
 			<animated.h5 style={subtitleProps} id="HeroSubtitle">
 				{subtitle}
 			</animated.h5>

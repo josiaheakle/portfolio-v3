@@ -14,6 +14,7 @@
 	height: 16rem;
 	position: absolute;
 	bottom: 0;
+	pointer-events: none;
 }
 
 #learn-more-button-container {
@@ -39,11 +40,15 @@
 	justify-content: space-evenly;
 	align-items: flex-end;
 	position: absolute;
+	left: 0;
+	right: 0;
 	bottom: 0;
 }
 
 .MainCard {
 	font-family: var(--header-font);
+	height: 15rem;
+
 	font-size: 1.2rem;
 	color: var(--white);
 	font-weight: bold;
@@ -51,27 +56,53 @@
 	border-radius: 10px;
 	width: 18vw;
 	padding: 2rem;
+	position: relative;
+	bottom: -5vh;
+	transition: bottom 250ms;
 }
 
-.MainCard.one {
-	background-color: var(--primary-green);
-	height: 16rem;
+.MainCard.open {
+	bottom: 64vh;
+}
 
+.MainCard.locked {
+	bottom: 66vh;
+}
+
+/* .MainCard.locked.three {
+	transform: translateY(-64vh);
+}
+
+.MainCard.locked.two {
+	transform: translateY(-68vh);
+}
+
+.MainCard.locked.one {
+	transform: translateY(-72vh);
+} */
+
+.MainCard.three {
+	background-color: var(--primary-green);
 	z-index: 3;
 }
 
 .MainCard.two {
 	background-color: var(--contrast-blue);
-	height: 15rem;
-
 	z-index: 5;
 }
 
-.MainCard.three {
+.MainCard.one {
 	background-color: var(--primary-blue);
-	height: 14rem;
-
 	z-index: 7;
+}
+
+.MainCard.open {
+	/* bottom: -10vh; */
+}
+
+.MainCard.locked {
+	/* bottom: -80vh; */
+	z-index: 8;
 }
 
 @media only screen and (max-width: 1024px) {

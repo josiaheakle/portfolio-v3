@@ -2,8 +2,9 @@ import { posix, relative } from "path";
 import * as React from "react";
 import { ServicesMenu } from "./ServicesMenu";
 
-import { useIsMobile } from "../../../../hooks/ReactiveHooks";
-import { WaveBackgroundBot1 } from "../../../ui/backgrounds/WaveBackgroundBot1";
+import { useIsMobile } from "../../../hooks/ReactiveHooks";
+import { WaveBackgroundBot1 } from "../../ui/backgrounds/WaveBackgroundBot1";
+import { WaveBackgroundBot2 } from "../../ui/backgrounds/WaveBackgroundBot2";
 
 interface ServicesSectionProps {}
 
@@ -11,33 +12,22 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({}) => {
 	const isMobile = useIsMobile();
 	return (
 		<section className="Section" id="Services">
-			{!isMobile ? (
-				<h2 className="heading">OUR SERVICES</h2>
-			) : (
-				<h2 className="heading-bottom" />
-			)}
 			<div id="ServicesMenuContainer">
 				<ServicesMenu
 					groups={[
 						{
-							title: "start up",
+							title: "React",
 							services: [
 								{
-									title: "Buisness Plans",
+									title: "",
 									description: "Lorem ipsum",
-									inPerson: true,
-									remote: true,
-								},
-								{
-									title: "Product Development",
-									description: "we help develop a product with you",
 									inPerson: true,
 									remote: true,
 								},
 							],
 						},
 						{
-							title: "training",
+							title: "WordPress",
 							services: [
 								{
 									title: "Creating Continuous Flow",
@@ -90,8 +80,22 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({}) => {
 							],
 						},
 						{
-							title: "MDI",
+							title: "JamStack",
 							services: [
+								{
+									title: "Eden Prairie Remodelers",
+									description:
+										"A digital storefront for home remodelers in Eden Prairie, MN.",
+									inPerson: false,
+									remote: true,
+								},
+								{
+									title: "Hendersonville Home Remodel",
+									description:
+										"A digital storefront for home remodelers in Hendersonville, TN.",
+									inPerson: false,
+									remote: true,
+								},
 								{
 									title: "Managing Daily Improvement",
 									description: "dddd asdfasdf",
@@ -100,21 +104,10 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({}) => {
 								},
 							],
 						},
-						{
-							title: "Plant Layouts",
-							services: [
-								{
-									title: "Plant Layout Restructuring",
-									description: "Establish Most Effective Plant Layout",
-									inPerson: true,
-									remote: true,
-								},
-							],
-						},
 					]}
 				/>
 			</div>
-			<WaveBackgroundBot1 />
+			<WaveBackgroundBot2 />
 		</section>
 	);
 };

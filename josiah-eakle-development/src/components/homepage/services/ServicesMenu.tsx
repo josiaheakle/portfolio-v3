@@ -1,8 +1,7 @@
 import * as React from "react";
-import { useIsMobile } from "../../../../hooks/ReactiveHooks";
-import { Group } from "../../../../types/ServiceTypes";
-import { MenuCard } from "../../../ui/cards/MenuCard";
-import { DriveLogo } from "../../../ui/icons/DriveLogo";
+import { useIsMobile } from "../../../hooks/ReactiveHooks";
+import { Group } from "../../types/Project.type";
+import { MenuCard } from "../../ui/cards/MenuCard";
 import { ServicesList } from "./ServicesList";
 import { ServicesListTab } from "./ServicesListTab";
 
@@ -23,7 +22,7 @@ const ServicesMenu: React.FC<ServicesMenuProps> = ({ groups }) => {
 		<MenuCard className={`ServicesMenu ${activeList === -1 ? "start" : ""}`}>
 			{isMobile ? (
 				<>
-					<h2 className="active-group-title">SERVICES</h2>
+					<h2 className="active-group-title">Projects</h2>
 					{activeList > -1 ? (
 						<div
 							onClick={() => setHideTabs(!hideTabs)}
@@ -49,7 +48,7 @@ const ServicesMenu: React.FC<ServicesMenuProps> = ({ groups }) => {
 				</div>
 				<div className={`ServicesTabContainer ${hideTabs ? "hidden" : ""}`}>
 					<h3 className="heading-bottom blue-text">
-						What are you looking for?
+						What projects are you interested to see?
 					</h3>
 					{groups.map((group, i) => (
 						<ServicesListTab
@@ -61,7 +60,7 @@ const ServicesMenu: React.FC<ServicesMenuProps> = ({ groups }) => {
 								setActiveList(i);
 							}}
 						>
-							{group.title.toUpperCase()}
+							{group.title}
 						</ServicesListTab>
 					))}
 				</div>

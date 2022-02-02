@@ -1,13 +1,12 @@
-import { spawn } from "child_process";
 import * as React from "react";
-import { useIsMobile } from "../../../../hooks/ReactiveHooks";
-import { WaveBackgroundBot3 } from "../../../ui/backgrounds/WaveBackgroundBot3";
-import { Button } from "../../../ui/buttons/Button";
-import { Card } from "../../../ui/cards/Card";
-import { MailIcon } from "../../../ui/icons/MailIcon";
-import { RemoteIcon } from "../../../ui/icons/RemoteIcon";
-import { TextAreaInput } from "../../../ui/text-input/TextAreaInput";
-import { TextInput } from "../../../ui/text-input/TextInput";
+import { useIsMobile } from "../../../hooks/ReactiveHooks";
+import { WaveBackgroundBot3 } from "../../ui/backgrounds/WaveBackgroundBot3";
+import { Button } from "../../ui/buttons/Button";
+import { Card } from "../../ui/cards/Card";
+import { MailIcon } from "../../ui/icons/MailIcon";
+import { RemoteIcon } from "../../ui/icons/RemoteIcon";
+import { TextAreaInput } from "../../ui/text-input/TextAreaInput";
+import { TextInput } from "../../ui/text-input/TextInput";
 
 import "./Contact.css";
 
@@ -20,9 +19,9 @@ const ContactSection: React.FC<ContactSectionProps> = ({}) => {
 			<Card id="ContactCard">
 				<div className="ContactHeader">
 					<span>
-						<h2 className=" heading-top no-mar-top">CONTACT US</h2>
+						<h2 className=" heading-top no-mar-top">Contact Me</h2>
 						<h5 className=" green-text heading-bottom">
-							we would love to hear from you
+							I would love to hear from you.
 						</h5>
 					</span>
 					<div id="contact-info-container">
@@ -59,7 +58,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({}) => {
 							<TextAreaInput
 								containerId="contact-text-area-container"
 								id="contact-text-area"
-								label="How can we help?"
+								label="How can I help?"
 							/>
 						</div>
 						<Button id="contact-submit">Submit</Button>
@@ -67,9 +66,11 @@ const ContactSection: React.FC<ContactSectionProps> = ({}) => {
 				</div>
 			</Card>
 
-			<div className="wave-background-container contact">
-				<WaveBackgroundBot3 />
-			</div>
+			{isMobile ? (
+				<div className="wave-background-container contact">
+					<WaveBackgroundBot3 />
+				</div>
+			) : null}
 		</section>
 	);
 };

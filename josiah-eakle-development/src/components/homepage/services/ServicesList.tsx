@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Service as ServiceType } from "../../../../types/ServiceTypes";
+import { Project as ServiceType } from "../../types/Project.type";
 import { Service } from "./Service";
 
 interface ServicesListProps {
@@ -14,9 +14,7 @@ const ServicesList: React.FC<ServicesListProps> = ({
 	return (
 		<ul className="ServicesList">
 			{serviceTitle ? (
-				<h4 className="center-text heading-bottom blue-text">
-					{serviceTitle.toUpperCase()}
-				</h4>
+				<h4 className="center-text heading-bottom blue-text">{serviceTitle}</h4>
 			) : null}
 			{services.map((service, i) => (
 				<Service key={i} {...service} />

@@ -1,10 +1,10 @@
 import * as React from "react";
-import { Button } from "../../../ui/buttons/Button";
+import { Button } from "../../ui/buttons/Button";
 
-import { Service as ServiceType } from "../../../../types/ServiceTypes";
+import { Project as ServiceType } from "../../types/Project.type";
 
-import { InPersonIcon } from "../../../ui/icons/InPersonIcon";
-import { RemoteIcon } from "../../../ui/icons/RemoteIcon";
+import { InPersonIcon } from "../../ui/icons/InPersonIcon";
+import { RemoteIcon } from "../../ui/icons/RemoteIcon";
 
 interface ServiceProps extends ServiceType {}
 
@@ -15,15 +15,15 @@ const Service: React.FC<ServiceProps> = (props) => {
 				<h4 className="top">{props.title}</h4>
 				<h5 className="bottom">
 					{props.inPerson && props.remote
-						? "IN PERSON / REMOTE"
+						? "Onsite / Remote"
 						: props.inPerson
-						? "IN PERSON"
+						? "Onsite"
 						: props.remote
-						? "REMOTE"
+						? "Remote"
 						: null}
 				</h5>
 			</div>
-			<Button>LEARN MORE</Button>
+			<Button>Learn More</Button>
 		</div>
 	);
 };

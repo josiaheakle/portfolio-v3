@@ -1,5 +1,4 @@
 import * as React from "react";
-import { DriveLogo } from "../icons/DriveLogo";
 
 import "./Footer.css";
 
@@ -9,13 +8,13 @@ const Footer: React.FC<FooterProps> = ({}) => {
 	return (
 		<footer className="Footer">
 			<span id="brand-copyright" className="footer-text">
-				© 2021 DRIVE VENTURES.
-				<br /> ALL RIGHTS RESERVED.
+				© 2022 Josiah Eakle Development.
+				<br /> All Rights Reserved.
 			</span>
 			<span id="created-by" className="footer-text">
-				WEBSITE CREATED BY{" "}
+				Website created by{" "}
 				<a className="created-by-link" href="josiaheakle.com">
-					JOSIAH EAKLE
+					Josiah Eakle
 				</a>
 			</span>
 		</footer>

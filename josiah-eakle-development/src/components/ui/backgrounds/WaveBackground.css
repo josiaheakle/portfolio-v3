@@ -5,8 +5,8 @@
 	width: 100vw;
 }
 
-.WaveBackground.top {
-}
+/* .WaveBackground.top {
+} */
 
 .WaveBackground.bottom.one {
 	z-index: 0;
@@ -27,12 +27,22 @@
 }
 
 .wave {
+	pointer-events: none;
+	transition: bottom 250ms;
+	height: 100%;
+	min-height: 100vh;
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 0;
-	bottom: 0;
-	height: 100%;
+	bottom: -80vh;
+}
+
+@media only screen and (min-width: 1024px) {
+	.WaveBackground.bottom.one,
+	.WaveBackground.bottom.two,
+	.WaveBackground.bottom.three {
+		background-color: transparent;
+	}
 }
 
 .wave.one {
@@ -45,3 +55,25 @@
 .wave.three {
 	z-index: 2;
 }
+
+.wave.open {
+	bottom: -10vh;
+}
+
+.wave.locked {
+	height: 100%;
+	z-index: 9;
+}
+
+/* .wave.open.three {
+	transform: translateY(-70vh);
+}
+
+
+.wave.open.two {
+	transform: translateY(-75vh);
+}
+
+.wave.open.one {
+	transform: translateY(-76vh);
+} */

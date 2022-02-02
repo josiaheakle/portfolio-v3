@@ -1,7 +1,14 @@
 #Services {
 	background-color: var(--primary-blue);
-	display: grid;
-	grid-template-rows: min-content auto;
+}
+
+@media only screen and (min-width: 1024px) {
+	#Services {
+		margin-top: 20vh;
+		height: 80vh;
+		background-color: transparent;
+		pointer-events: none;
+	}
 }
 
 #Services > .heading {
@@ -16,12 +23,16 @@
 }
 
 .ServicesMenu {
+	pointer-events: auto;
+
 	align-items: flex-end;
 	position: relative;
 	transition: height 250ms, width 250ms;
 }
 
 .ServicesList {
+	pointer-events: auto;
+
 	position: relative;
 	width: 42vw;
 	height: 100%;
