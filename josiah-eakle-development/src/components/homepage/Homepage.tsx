@@ -12,6 +12,7 @@ import { Footer } from "../ui/footer/Footer";
 import { Header } from "../ui/header/Header";
 import { AboutSection } from "./about/AboutSection";
 import { useIsMobile } from "../../hooks/ReactiveHooks";
+import { InteractiveBackground } from "../ui/backgrounds/interactive-background/InteractiveBackground";
 
 interface HomepageProps {}
 
@@ -43,10 +44,11 @@ const Homepage: React.FC<HomepageProps> = ({}) => {
 				</>
 			) : (
 				<>
+					<InteractiveBackground />
 					<MainSection activeCard={activeCard} setActiveCard={setActiveCard} />
-					{activeCard === 1 ? <AboutSection /> : null}
+					{activeCard === 3 ? <AboutSection /> : null}
 					{activeCard === 2 ? <ServicesSection /> : null}
-					{activeCard === 3 ? <ContactSection /> : null}
+					{activeCard === 1 ? <ContactSection /> : null}
 					<Footer />
 				</>
 			)}

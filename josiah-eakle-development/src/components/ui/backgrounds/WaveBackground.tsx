@@ -14,7 +14,7 @@ const WaveBackground: React.FC<WaveBackgroundProps> = ({ activeCard }) => {
 				className={`wave three ${activeCard > 0 ? "open" : ""} ${
 					activeCard === 3 ? "locked" : ""
 				}`}
-				fill="var(--primary-green)"
+				fill="var(--primary-green-trans)"
 				options={{
 					height: 25,
 					amplitude: 50,
@@ -27,7 +27,7 @@ const WaveBackground: React.FC<WaveBackgroundProps> = ({ activeCard }) => {
 				className={`wave two ${activeCard > 0 ? "open" : ""} ${
 					activeCard === 2 ? "locked" : ""
 				}`}
-				fill="var(--contrast-blue)"
+				fill="var(--contrast-blue-trans)"
 				options={{
 					height: 25,
 					amplitude: 50,
@@ -39,7 +39,7 @@ const WaveBackground: React.FC<WaveBackgroundProps> = ({ activeCard }) => {
 				className={`wave one ${activeCard > 0 ? "open" : ""} ${
 					activeCard === 1 ? "locked" : ""
 				}`}
-				fill="var(--primary-blue)"
+				fill="var(--primary-blue-trans)"
 				options={{
 					height: 25,
 					amplitude: 50,

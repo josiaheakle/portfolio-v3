@@ -11,19 +11,19 @@
 .WaveBackground.bottom.one {
 	z-index: 0;
 
-	background-color: var(--primary-blue);
+	background-color: var(--primary-blue-trans);
 }
 
 .WaveBackground.bottom.two {
 	z-index: 0;
 
-	background-color: var(--contrast-blue);
+	background-color: var(--contrast-blue-trans);
 }
 
 .WaveBackground.bottom.three {
 	z-index: 0;
 
-	background-color: var(--primary-green);
+	background-color: var(--primary-green-trans);
 }
 
 .wave {
@@ -57,11 +57,13 @@
 }
 
 .wave.open {
-	bottom: -10vh;
+	/* bottom: -10vh; */
 }
 
 .wave.locked {
 	height: 100%;
+	bottom: -10vh;
+
 	z-index: 9;
 }
 

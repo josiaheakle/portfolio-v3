@@ -4,8 +4,8 @@
 
 @media only screen and (min-width: 1024px) {
 	#Services {
-		margin-top: 20vh;
-		height: 80vh;
+		margin-top: 15vh;
+		height: 85vh;
 		background-color: transparent;
 		pointer-events: none;
 	}
@@ -65,6 +65,10 @@
 	align-items: flex-end;
 	position: relative;
 	text-align: end;
+}
+
+.ServicesTabContainer > h3 {
+	padding-left: 2rem;
 }
 
 .Service {

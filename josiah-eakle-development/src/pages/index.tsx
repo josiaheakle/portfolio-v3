@@ -9,6 +9,7 @@ interface IndexProps {}
 const Index: React.FC<IndexProps> = ({}) => {
 	return (
 		<main>
+			<canvas id="AnimatedBackground"></canvas>
 			<Homepage />
 		</main>
 	);
