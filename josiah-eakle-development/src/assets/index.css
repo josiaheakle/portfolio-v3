@@ -19,8 +19,18 @@ body {
 	--primary-blue: #316985;
 	--primary-green: #00724c;
 
+	--dark:#0F1223;
+	--main:#0A1138;
+	--cont:#BF5F00;
+	--grey:#676A79;
+
 		
 	*/
+
+	--dark: #0f1223;
+	--main: #0a1138;
+	--cont: #bf5f00;
+	--grey: #676a79;
 
 	--contrast-blue: #a0474a;
 	--primary-blue: #316985;
@@ -33,7 +43,7 @@ body {
 	--primary-grey: #9b9b9b;
 
 	--black: #101427;
-	--transparent-black: #1f1f1fca;
+	--transparent-black: #0a1138;
 
 	--header-font: "Quicksand", sans-serif;
 	--body-font: "Open Sans", sans-serif;
@@ -41,8 +51,6 @@ body {
 	font-family: var(--body-font);
 	font-weight: 400;
 	line-height: 1.5;
-
-	background-color: var(--black);
 }
 
 html {
@@ -50,7 +58,7 @@ html {
 	overflow-x: hidden;
 }
 
-canvas#AnimatedBackground {
+canvas {
 	position: fixed;
 	background-color: transparent;
 	top: 0;
@@ -94,108 +102,12 @@ h5 {
 	font-size: 1.1rem;
 }
 
-small,
-.text_small {
+small {
 	font-size: 0.833rem;
 }
 
 @media only screen and (max-width: 1023px) {
-	html {
-		font-size: 90%;
-	}
-
 	body {
 		--header-height: 80px;
 	}
-}
-
-.no-mar-top {
-	margin-top: 0;
-}
-
-.margin-top {
-	margin-top: 2rem;
-}
-
-.margin-bottom {
-	margin-bottom: 2rem;
-}
-
-.blue-text {
-	color: var(--primary-blue);
-}
-
-.white-text {
-	color: var(--white);
-}
-
-.green-text {
-	color: var(--primary-green);
-}
-
-.header-text {
-	font-family: var(--header-font);
-}
-
-.heading-top {
-	margin-bottom: 0;
-}
-
-.heading-bottom {
-	margin-top: 0;
-}
-
-.center-text {
-	text-align: center;
-}
-.bg-pri-blue {
-	background-color: var(--primary-blue);
-}
-
-.bg-pri-green {
-	background-color: var(--primary-green);
-}
-
-.bg-con-blue {
-	background-color: var(--contrast-blue);
-}
-
-.bg-light-blue {
-	background-color: var(--light-blue);
-}
-
-.flex-row {
-	display: flex;
-	flex-direction: row;
-}
-
-.flex-column {
-	display: flex;
-	flex-direction: column;
-}
-
-.Section {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-	z-index: 5;
-}
-
-@media only screen and (min-width: 1024px) {
-	.Section {
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-	}
-}
-
-.Section > .heading {
-	color: var(--white);
-	z-index: 5;
 }

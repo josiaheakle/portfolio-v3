@@ -1,6 +1,5 @@
 import * as React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import * as css from "./TextInput.module.css";
 
 interface TextAreaInputProps extends React.HTMLAttributes<HTMLTextAreaElement> {
 	errors?: Array<string>;
@@ -13,8 +12,8 @@ export const TextAreaInput: React.FC<TextAreaInputProps> = ({
 	containerId,
 	...props
 }) => {
-	const [isFocued, setFocused] = useState<boolean>(false);
-	const [input, setInput] = useState<string>();
+	const [isFocued, setFocused] = React.useState<boolean>(false);
+	const [input, setInput] = React.useState<string>();
 
 	const inputRef: React.RefObject<HTMLTextAreaElement> = React.createRef();
 
@@ -33,7 +32,7 @@ export const TextAreaInput: React.FC<TextAreaInputProps> = ({
 		}
 	};
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (props.reset) {
 			if (inputRef.current) inputRef.current.innerHTML = "";
 			setInput(undefined);
@@ -44,7 +43,7 @@ export const TextAreaInput: React.FC<TextAreaInputProps> = ({
 		}
 	}, [props]);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (input && input.length > 0) setFocused(true);
 		else setFocused(false);
 	}, [input]);
@@ -52,9 +51,9 @@ export const TextAreaInput: React.FC<TextAreaInputProps> = ({
 	return (
 		<div
 			id={`${containerId ? containerId : ""}`}
-			className="TextInputContainer"
+			className={`${css.TextInputContainer}`}
 		>
-			<div className={`TextInput ${errors ? "invalid" : ""}`}>
+			<div className={`${css.TextInput} ${errors ? "invalid" : ""}`}>
 				<label className={isFocued ? "focused" : ""} htmlFor={props.id}>
 					{props.label}
 				</label>
@@ -67,10 +66,10 @@ export const TextAreaInput: React.FC<TextAreaInputProps> = ({
 				></textarea>
 			</div>
 			{errors ? (
-				<ul className="TextInput-error-list">
+				<ul className={`${css.TextInputErrorList}`}>
 					{errors.map((error, i) => {
 						return (
-							<li key={i} className="TextInput-error">
+							<li key={i} className={`${css.TextInputError}`}>
 								{error}
 							</li>
 						);

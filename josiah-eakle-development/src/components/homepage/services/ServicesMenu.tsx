@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useIsMobile } from "../../../hooks/ReactiveHooks";
-import { Group } from "../../types/Project.type";
+import { Group } from "../../../types/Project.type";
 import { MenuCard } from "../../ui/cards/MenuCard";
 import { ServicesList } from "./ServicesList";
 import { ServicesListTab } from "./ServicesListTab";

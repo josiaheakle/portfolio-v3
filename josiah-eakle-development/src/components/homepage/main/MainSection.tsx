@@ -1,10 +1,10 @@
 import * as React from "react";
 import { useIsMobile } from "../../../hooks/ReactiveHooks";
 
-import { WaveBackground } from "../../ui/backgrounds/WaveBackground";
+// import { WaveBackground } from "../../ui/backgrounds/WaveBackground";
 import { Button } from "../../ui/buttons/Button";
-import { LearnMoreButton } from "../../ui/buttons/LearnMoreButton";
-import { Hero } from "./hero/Hero";
+// import { LearnMoreButton } from "../../ui/buttons/LearnMoreButton";
+import { Hero } from "../hero/Hero";
 
 import { useSpring, animated } from "react-spring";
 
@@ -95,7 +95,7 @@ const MainSection: React.FC<MainSectionProps> = ({
 				</div>
 			)}
 			<div className="wave-background-container main">
-				<WaveBackground activeCard={activeCard} />
+				{/* <WaveBackground activeCard={activeCard} /> */}
 			</div>
 		</main>
 	);

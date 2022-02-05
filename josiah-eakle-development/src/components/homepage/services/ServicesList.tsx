@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Project as ServiceType } from "../../types/Project.type";
+import { Project as ServiceType } from "../../../types/Project.type";
 import { Service } from "./Service";
 
 interface ServicesListProps {

@@ -1,0 +1,42 @@
+.OpenContainer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+}
+
+.Hamburger {
+	cursor: pointer;
+	border-radius: 0.5rem;
+	padding: 0.25rem;
+	background-color: transparent;
+	/* transition: background-color var(--anim-length); */
+}
+
+.Hamburger > div {
+	transition: opacity 250ms, transform 250ms, background-color 250ms;
+	background-color: var(--main);
+
+	width: 1.5rem;
+	height: 0.25rem;
+	border-radius: 0.25rem;
+	margin: 0.25rem;
+}
+
+.Hamburger.open > div {
+	background-color: var(--cont);
+}
+
+.middle.open {
+	opacity: 0;
+}
+
+.top.open {
+	transform: translateY(0.5rem) rotate(45deg);
+}
+
+.bottom.open {
+	transform: translateY(-0.5rem) rotate(-45deg);
+}

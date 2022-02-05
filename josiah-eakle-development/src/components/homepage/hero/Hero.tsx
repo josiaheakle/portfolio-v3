@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { animated, useSpring } from "react-spring";
+import { Section } from "../../section/Section";
 
 import "./Hero.css";
 
@@ -24,14 +25,14 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, ...props }) => {
 	});
 
 	return (
-		<div id="Hero" {...props}>
+		<Section id="Hero" {...props}>
 			<animated.h5 style={subtitleProps} id="HeroSubtitle">
 				{subtitle}
 			</animated.h5>
 			<animated.h2 style={titleProps} id="HeroTitle">
 				{title}
 			</animated.h2>
-		</div>
+		</Section>
 	);
 };
 

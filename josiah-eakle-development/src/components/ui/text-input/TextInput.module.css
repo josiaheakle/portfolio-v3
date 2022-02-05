@@ -97,14 +97,14 @@
 	font-size: 12px;
 }
 
-.TextInput-error {
+.TextInputError {
 	font-size: 0.9em;
 	text-align: left;
 	margin-block-start: 0px;
 	margin-block-end: 0px;
 }
 
-.TextInput-error-list {
+.TextInputErrorList {
 	margin: 0.25em;
 	display: flex;
 	flex-direction: column;

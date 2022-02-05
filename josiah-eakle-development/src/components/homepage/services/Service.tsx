@@ -1,10 +1,7 @@
 import * as React from "react";
 import { Button } from "../../ui/buttons/Button";
 
-import { Project as ServiceType } from "../../types/Project.type";
-
-import { InPersonIcon } from "../../ui/icons/InPersonIcon";
-import { RemoteIcon } from "../../ui/icons/RemoteIcon";
+import { Project as ServiceType } from "../../../types/Project.type";
 
 interface ServiceProps extends ServiceType {}
 

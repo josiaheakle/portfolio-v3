@@ -1,29 +1,23 @@
-// Drive Header
-
 // dependencies
-import React, { useState } from "react";
+import React from "react";
+import { animated, useSpring } from "react-spring";
 
 // components
 import { Navbar } from "./Navbar";
-import LogoIcon from "../../../assets/icon.png";
 
 // hooks
-import { useIsMobile } from "../../../hooks/ReactiveHooks";
+import { useIsMobile } from "../../hooks/ReactiveHooks";
 import { useScrollYPosition } from "react-use-scroll-position";
 
-// css
-import "./Header.css";
-import { animated, useSpring } from "react-spring";
+// assets
+import LogoIcon from "../../assets/icon.png";
+import * as css from "./Header.module.css";
 
 // types
 interface HeaderProps {
 	hidden?: boolean;
 	title?: string;
 	subtitle?: string;
-	icon?: {
-		src: string;
-		alt: string;
-	};
 	pages?: Array<{
 		title: string;
 		link?: string;
@@ -31,7 +25,12 @@ interface HeaderProps {
 	}>;
 }
 
-export const Header: React.FC<HeaderProps> = ({ pages, hidden }) => {
+export const Header: React.FC<HeaderProps> = ({
+	title,
+	subtitle,
+	pages,
+	hidden,
+}) => {
 	const [isSmall, setIsSmall] = React.useState(false);
 	const [isOpen, setIsOpen] = React.useState(false);
 	const [isMobileHidden, setIsMobileHidden] = React.useState(false);
@@ -73,37 +72,34 @@ export const Header: React.FC<HeaderProps> = ({ pages, hidden }) => {
 	return (
 		<animated.header
 			style={isMobile ? headerAnimMobile : headerAnim}
-			className={`Header  ${isMobile ? "mobile" : ""} ${
+			className={`${css.Header}  ${isMobile ? "mobile" : ""} ${
 				isMobileHidden || hidden ? "hidden" : ""
 			} ${!isSmall ? "large" : ""} ${isOpen ? "mobile-open" : ""}`}
 		>
-			<a className="header-container" href="/">
+			<a className={`${css.HeaderContainer}`} href="/">
 				<img
-					className={`HeaderLogo`}
+					className={`${css.HeaderLogo}`}
 					src={LogoIcon}
 					alt="Josiah Eakle Development"
 				/>
-				<span className="header-text-container">
-					<h3 className="main-header">Josiah Eakle</h3>
-					<h5
-						className={`secondary-header ${
+				<span className={`${css.HeaderTextContainer}`}>
+					<span className={`${css.HeadingTop}`}>{title}</span>
+					<span
+						className={`${css.HeadingBottom} ${
 							isSmall && !isMobile ? "small" : ""
 						}`}
 					>
-						Full Stack Developer
-					</h5>
+						{subtitle}
+					</span>
 				</span>
 			</a>
 			{pages ? (
-				<nav>
-					<Navbar
-						setOpen={(open) => {
-							setIsOpen(open);
-						}}
-						isMobile={isMobile}
-						links={pages}
-					/>
-				</nav>
+				<Navbar
+					setOpen={(open) => {
+						setIsOpen(open);
+					}}
+					links={pages}
+				/>
 			) : null}
 		</animated.header>
 	);

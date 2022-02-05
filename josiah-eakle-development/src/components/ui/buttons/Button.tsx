@@ -1,13 +1,13 @@
 import * as React from "react";
 
-import "./Button.css";
+import * as css from "./Button.module.css";
 
 interface ButtonProps extends React.HtmlHTMLAttributes<HTMLButtonElement> {}
 
 const Button: React.FC<ButtonProps> = (props) => {
 	return (
 		<button
-			className={`Button ${props.className ? props.className : ""}`}
+			className={`${css.Button} ${props.className ? props.className : ""}`}
 			{...props}
 		></button>
 	);

@@ -1,6 +1,8 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 
+import * as css from "./TextInput.module.css";
+
 import "./TextInput.css";
 
 interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
@@ -48,9 +50,11 @@ export const TextInput: React.FC<TextInputProps> = (props) => {
 
 	return (
 		<div
-			className={`TextInputContainer ${props.className ? props.className : ""}`}
+			className={`${css.TextInputContainer} ${
+				props.className ? props.className : ""
+			}`}
 		>
-			<span className={`TextInput ${props.errors ? "invalid" : ""}`}>
+			<span className={`${css.TextInput} ${props.errors ? "invalid" : ""}`}>
 				<label className={isFocued ? "focused" : ""} htmlFor={props.id}>
 					{props.label}
 				</label>
@@ -63,10 +67,10 @@ export const TextInput: React.FC<TextInputProps> = (props) => {
 				></input>
 			</span>
 			{props.errors ? (
-				<ul className="TextInput-error-list">
+				<ul className={`${css.TextInputErrorList}`}>
 					{props.errors.map((error, i) => {
 						return (
-							<li key={i} className="TextInput-error">
+							<li key={i} className={`${css.TextInputError}`}>
 								{error}
 							</li>
 						);
