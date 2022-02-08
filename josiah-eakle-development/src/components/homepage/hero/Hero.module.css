@@ -1,0 +1,16 @@
+.Hero {
+	width: 60vw;
+}
+
+.Subtitle {
+	margin-bottom: 0;
+	font-size: var(--h4);
+	color: var(--contrast);
+	font-weight: bold;
+}
+
+.Title {
+	margin-top: 0;
+	color: var(--white);
+	text-shadow: 2px 2px var(--dark);
+}

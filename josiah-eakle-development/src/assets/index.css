@@ -5,34 +5,43 @@ body {
 	--header-height: 80px;
 	--header-large-height: 120px;
 
-	/* #7E52A0 purp
-		#B485D7 light purp
-		#FFE9FF rose
-		#00C9B0 teal
+	/* 
 
-		###316985
-		###A0474A
-		###00724C
-		###EFFBFF
-		
-	--contrast-blue: #a0474a;
-	--primary-blue: #316985;
-	--primary-green: #00724c;
+--blue-ryb: #324EEAff;
+--dark-cornflower-blue: #3A447Aff;
+--xiketic: #0D1021ff;
+--white: #FFFFFFff;
+--dim-gray: #656565ff;
 
-	--dark:#0F1223;
-	--main:#0A1138;
-	--cont:#BF5F00;
-	--grey:#676A79;
+
 
 		
 	*/
 
-	--dark: #0f1223;
-	--main: #0a1138;
-	--cont: #bf5f00;
-	--grey: #676a79;
+	--bg-main: #808080;
+	--bg-dark: #000000;
+	--bg-cont: #ffffff;
 
-	--contrast-blue: #a0474a;
+	--main: #3a447aff;
+	--contrast: #324eeaff;
+	--dark: #0d1021ff;
+	--gray: #656565ff;
+	--white: #ffffffff;
+	--transparent: #ffffff88;
+
+	--transparent: #ffffff88;
+	--transparent: #ffffff88;
+	--transparent: #ffffff88;
+
+	--transparent-yellow: #fbff0036;
+	--transparent-blue: #0026ff36;
+	--transparent-green: #33ff0036;
+
+	--h4: 1.44rem;
+	--small-font: 0.833rem;
+	--blur: 0.5rem;
+
+	/* --contrast-blue: #a0474a;
 	--primary-blue: #316985;
 	--primary-green: #00724c;
 	--contrast-blue-trans: #a0474acc;
@@ -43,9 +52,9 @@ body {
 	--primary-grey: #9b9b9b;
 
 	--black: #101427;
-	--transparent-black: #0a1138;
+	--transparent-black: #0a1138; */
 
-	--header-font: "Quicksand", sans-serif;
+	--header-font: "IBM Plex Sans Thai Looped", sans-serif;
 	--body-font: "Open Sans", sans-serif;
 
 	font-family: var(--body-font);

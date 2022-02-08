@@ -3,8 +3,6 @@ import * as React from "react";
 import { ServicesMenu } from "./ServicesMenu";
 
 import { useIsMobile } from "../../../hooks/ReactiveHooks";
-import { WaveBackgroundBot1 } from "../../ui/backgrounds/WaveBackgroundBot1";
-import { WaveBackgroundBot2 } from "../../ui/backgrounds/WaveBackgroundBot2";
 
 interface ServicesSectionProps {}
 
@@ -107,7 +105,6 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({}) => {
 					]}
 				/>
 			</div>
-			<WaveBackgroundBot2 />
 		</section>
 	);
 };

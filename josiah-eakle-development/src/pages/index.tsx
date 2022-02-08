@@ -5,27 +5,16 @@ import { Homepage } from "../components/homepage/Homepage";
 import "../assets/index.css";
 import Background from "../components/ui/backgrounds/Background";
 import { Header } from "../components/header/Header";
+import { AboutSection } from "../components/homepage/about/AboutSection";
+import { ServicesMenu } from "../components/homepage/services/ServicesMenu";
 
 interface IndexProps {}
 
 const Index: React.FC<IndexProps> = ({}) => {
-	const background = new Background(0x0a1138, 0xbf5f00, 0x0f1223);
+	const background = new Background(0x808080, 0xffffff, 0x0d1021);
 	background.start();
 
-	return (
-		<main>
-			<Header
-				title="Josiah Eakle"
-				subtitle="Subtitle"
-				pages={[
-					{ title: "hello", elemId: "Hello" },
-					{ title: "hello", elemId: "Hello" },
-					{ title: "hello", elemId: "Hello" },
-					{ title: "hello", elemId: "Hello" },
-				]}
-			></Header>
-		</main>
-	);
+	return <Homepage />;
 };
 
 export default Index;

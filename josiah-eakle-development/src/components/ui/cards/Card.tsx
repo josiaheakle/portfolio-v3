@@ -1,12 +1,15 @@
 import * as React from "react";
 
-import "./Card.css";
+import * as css from "./Card.module.css";
 
 interface CardProps extends React.HTMLAttributes<HTMLElement> {}
 
 const Card: React.FC<CardProps> = (props) => {
 	return (
-		<article {...props} className={`Card ${props.className || ""}`}></article>
+		<article
+			{...props}
+			className={`${css.Card} ${props.className || ""}`}
+		></article>
 	);
 };
 

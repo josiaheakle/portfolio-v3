@@ -1,28 +1,26 @@
 import * as React from "react";
 import * as css from "./Hamburger.module.css";
 
-interface HamburgerProps {
-	onOpenUpdate: (isOpen: boolean) => void;
+interface HamburgerProps extends React.HTMLProps<HTMLDivElement> {
+	open?: boolean;
 }
 
-const Hamburger: React.FC<HamburgerProps> = ({ onOpenUpdate }) => {
-	const [isOpen, setIsOpen] = React.useState(false);
-	React.useEffect(() => {
-		onOpenUpdate(isOpen);
-	}, [isOpen]);
+const Hamburger: React.FC<HamburgerProps> = ({ open, ...props }) => {
+	// const [isOpen, setIsOpen] = React.useState(open)
+
 	return (
 		<>
 			<div
-				onClick={() => {
-					setIsOpen(!isOpen);
-				}}
-				className={`${css.Hamburger} ${isOpen ? css.open : ""}`}
+				{...props}
+				className={`${css.Hamburger} ${open ? css.open : ""} ${
+					props.className ? props.className : ""
+				}`}
 			>
-				<div className={`${css.top} ${isOpen ? css.open : ""}`}></div>
-				<div className={`${css.middle} ${isOpen ? css.open : ""}`}></div>
-				<div className={`${css.bottom} ${isOpen ? css.open : ""}`}></div>
+				<div className={`${css.top} ${open ? css.open : ""}`}></div>
+				<div className={`${css.middle} ${open ? css.open : ""}`}></div>
+				<div className={`${css.bottom} ${open ? css.open : ""}`}></div>
 			</div>
-			{isOpen ? <div className={`${css.OpenContainer}`}></div> : null}
+			{open ? <div className={`${css.OpenContainer}`}></div> : null}
 		</>
 	);
 };

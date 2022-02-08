@@ -72,9 +72,9 @@ export const Header: React.FC<HeaderProps> = ({
 	return (
 		<animated.header
 			style={isMobile ? headerAnimMobile : headerAnim}
-			className={`${css.Header}  ${isMobile ? "mobile" : ""} ${
-				isMobileHidden || hidden ? "hidden" : ""
-			} ${!isSmall ? "large" : ""} ${isOpen ? "mobile-open" : ""}`}
+			className={`${css.Header}  ${isMobile ? css.mobile : ""} ${
+				isMobileHidden || hidden ? css.hidden : ""
+			} ${!isSmall ? css.large : ""} ${isOpen ? "mobile-open" : ""}`}
 		>
 			<a className={`${css.HeaderContainer}`} href="/">
 				<img

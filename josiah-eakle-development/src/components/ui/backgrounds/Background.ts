@@ -8,6 +8,7 @@ export default class Scene {
 	private cubes: Array<
 		THREE.Mesh<THREE.BoxGeometry, THREE.MeshStandardMaterial>
 	>;
+	private fog: THREE.Fog;
 
 	private mainColor: THREE.ColorRepresentation;
 	private contrastColor: THREE.ColorRepresentation;
@@ -23,20 +24,26 @@ export default class Scene {
 		this.backgroundColor = backgroundColor;
 		this.initObjects();
 		this.initScene();
+		this.initFog();
 		this.initCamera();
 		this.initResize();
 		this.initRenderer();
 	}
 
 	start() {
-		this.updateCameraPosition(50, 15, 50);
-		this.updateCameraRotationX(-1);
-		this.updateCameraRotationZ(0.6);
-		this.updateCameraRotationY(0.4);
+		this.updateCameraPosition(0, 10, 0);
+		this.updateCameraRotationX(0);
+		this.updateCameraRotationZ(0);
+		this.updateCameraRotationY(0);
 		this.createCube();
-		this.createPlane(100, 100);
+		this.createPlane(80, 80);
 		this.createLight();
 		this.animate();
+	}
+
+	initFog() {
+		this.fog = new THREE.Fog(this.backgroundColor, 0.1, 50);
+		this.scene.fog = this.fog;
 	}
 
 	initCamera() {
@@ -44,7 +51,7 @@ export default class Scene {
 			75,
 			window.innerWidth / window.innerHeight,
 			0.1,
-			1000
+			40
 		);
 	}
 
@@ -56,6 +63,7 @@ export default class Scene {
 
 	initScene() {
 		this.scene = new THREE.Scene();
+		this.scene.background = new THREE.Color(this.backgroundColor);
 	}
 
 	initObjects() {
@@ -81,7 +89,7 @@ export default class Scene {
 		const light = new THREE.PointLight();
 		light.castShadow = true;
 		light.position.set(50, 20, 50);
-		light.intensity = 4;
+		light.intensity = 2;
 		this.scene.add(light);
 	}
 
@@ -103,7 +111,6 @@ export default class Scene {
 				const material = new THREE.MeshStandardMaterial({
 					color: this.mainColor,
 				});
-
 				const box = new THREE.Mesh(geometry, material);
 				box.position.set(x * 1.5, 0, y * 1.5);
 				box.castShadow = true;

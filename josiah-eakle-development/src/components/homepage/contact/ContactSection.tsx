@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useIsMobile } from "../../../hooks/ReactiveHooks";
-import { WaveBackgroundBot3 } from "../../ui/backgrounds/WaveBackgroundBot3";
+import { Section } from "../../section/Section";
 import { Button } from "../../ui/buttons/Button";
 import { Card } from "../../ui/cards/Card";
 import { MailIcon } from "../../ui/icons/MailIcon";
@@ -15,7 +15,7 @@ interface ContactSectionProps {}
 const ContactSection: React.FC<ContactSectionProps> = ({}) => {
 	const isMobile = useIsMobile();
 	return (
-		<section id="Contact" className="Section">
+		<Section id="Contact">
 			<Card id="ContactCard">
 				<div className="ContactHeader">
 					<span>
@@ -65,13 +65,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({}) => {
 					</form>
 				</div>
 			</Card>
-
-			{isMobile ? (
-				<div className="wave-background-container contact">
-					<WaveBackgroundBot3 />
-				</div>
-			) : null}
-		</section>
+		</Section>
 	);
 };
 

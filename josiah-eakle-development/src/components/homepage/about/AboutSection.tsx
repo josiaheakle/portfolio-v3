@@ -7,8 +7,8 @@ interface AboutSectionProps {}
 
 const AboutSection: React.FC<AboutSectionProps> = ({}) => {
 	return (
-		<Section id="About" className={`Section ${css.About}`}>
-			<h2>About Me</h2>
+		<Section id="About" className={`${css.About}`}>
+			<h2>My Skills</h2>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
 				dignissimos, doloribus libero recusandae illo voluptates tenetur non

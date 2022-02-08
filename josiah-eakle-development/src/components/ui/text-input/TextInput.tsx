@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 
 import * as css from "./TextInput.module.css";
 
-import "./TextInput.css";
-
 interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
 	errors?: Array<string>;
 	label?: string;
@@ -54,8 +52,8 @@ export const TextInput: React.FC<TextInputProps> = (props) => {
 				props.className ? props.className : ""
 			}`}
 		>
-			<span className={`${css.TextInput} ${props.errors ? "invalid" : ""}`}>
-				<label className={isFocued ? "focused" : ""} htmlFor={props.id}>
+			<span className={`${css.TextInput} `}>
+				<label className={isFocued ? css.focused : ""} htmlFor={props.id}>
 					{props.label}
 				</label>
 				<input

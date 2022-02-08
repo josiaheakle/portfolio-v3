@@ -16,7 +16,7 @@
 	align-items: center;
 	justify-content: space-between;
 
-	background-color: var(--transparent-white);
+	background-color: var(--transparent);
 	backdrop-filter: blur(5px);
 
 	transition: height 250ms ease, background-color 250ms, transform 250ms;
@@ -32,14 +32,12 @@
 }
 
 .HeaderLogo {
+	max-width: 4rem;
+	max-height: 4rem;
 	width: auto;
 	height: 100%;
 	margin: 0.5rem;
 }
-
-/* .header-icon {
-	height: 60%;
-} */
 
 .HeaderContainer {
 	z-index: 200;
@@ -70,13 +68,17 @@
 
 .HeadingTop {
 	height: fit-content;
+	font-family: var(--header-font);
+	font-weight: bold;
 	color: var(--main);
-	margin: 0;
+	font-size: var(--h4);
+	/* margin: 0 0 0.1rem 0; */
 }
 
 .HeadingBottom {
 	transition: height 200ms ease, opacity 200ms ease;
-	color: var(--cont);
+	font-size: var(--small-font);
+	color: var(--contrast);
 }
 
 .HeadingBottom.small {
@@ -89,19 +91,19 @@
 		max-height: var(--header-height);
 		padding: 1rem 5vw 1rem 5vw;
 		width: 90vw;
-		background-color: var(--transparent-white);
+		background-color: var(--transparent);
 		backdrop-filter: blur(5px);
 	}
 
 	.Header.mobile-open {
-		background-color: var(--white);
+		background-color: var(--dark);
 	}
 
 	.Header.large {
 		max-height: var(--header-height);
 		padding: 1rem 5vw 1rem 5vw;
 		width: 90vw;
-		background-color: var(--white);
+		background-color: var(--transparent);
 	}
 
 	.HeadingTop {

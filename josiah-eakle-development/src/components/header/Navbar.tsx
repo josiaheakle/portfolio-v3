@@ -40,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links, setOpen }) => {
 
 	return isMobile ? (
 		<nav>
-			<ul className={`${css.Navbar} ${isOpen ? "open" : "hidden"}`}>
+			<ul className={`${css.Navbar} ${isOpen ? css.open : ""}`}>
 				{links.map((link, index) => (
 					<li className={`${css.MobileNavLink}`} key={index}>
 						<a
@@ -55,9 +55,11 @@ export const Navbar: React.FC<NavbarProps> = ({ links, setOpen }) => {
 				<Button>Call Me</Button>
 			</ul>
 			<Hamburger
-				onOpenUpdate={(open) => {
-					setIsOpen(open);
+				className={`${css.MobileButton}`}
+				onClick={() => {
+					setIsOpen(!isOpen);
 				}}
+				open={isOpen}
 			/>
 		</nav>
 	) : (

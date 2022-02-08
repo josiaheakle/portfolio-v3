@@ -1,9 +1,15 @@
 import * as React from "react";
-import { useIsMobile } from "../../../hooks/ReactiveHooks";
-import { Group } from "../../../types/Project.type";
-import { MenuCard } from "../../ui/cards/MenuCard";
+
 import { ServicesList } from "./ServicesList";
 import { ServicesListTab } from "./ServicesListTab";
+import { MenuCard } from "../../ui/cards/MenuCard";
+
+import { useIsMobile } from "../../../hooks/ReactiveHooks";
+
+import { Group } from "../../../types/Project.type";
+import { Hamburger } from "../../ui/buttons/Hamburger";
+
+// import * as css from './ServicesMenu.module.css';
 
 interface ServicesMenuProps {
 	groups: Array<Group>;
@@ -24,16 +30,12 @@ const ServicesMenu: React.FC<ServicesMenuProps> = ({ groups }) => {
 				<>
 					<h2 className="active-group-title">Projects</h2>
 					{activeList > -1 ? (
-						<div
-							onClick={() => setHideTabs(!hideTabs)}
-							className={`mobile-navbar-icon services-menu-icon ${
-								hideTabs ? "" : "open"
-							}`}
-						>
-							<div className="top"></div>
-							<div className="middle"></div>
-							<div className="bottom"></div>
-						</div>
+						<Hamburger
+							onClick={() => {
+								setHideTabs(!hideTabs);
+							}}
+							open={!hideTabs}
+						/>
 					) : null}
 				</>
 			) : null}
@@ -47,9 +49,7 @@ const ServicesMenu: React.FC<ServicesMenuProps> = ({ groups }) => {
 					) : null}
 				</div>
 				<div className={`ServicesTabContainer ${hideTabs ? "hidden" : ""}`}>
-					<h3 className="heading-bottom blue-text">
-						What projects are you interested to see?
-					</h3>
+					<h3 className="heading-bottom blue-text"></h3>
 					{groups.map((group, i) => (
 						<ServicesListTab
 							key={i}

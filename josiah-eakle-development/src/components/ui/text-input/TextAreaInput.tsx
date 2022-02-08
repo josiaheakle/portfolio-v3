@@ -53,8 +53,8 @@ export const TextAreaInput: React.FC<TextAreaInputProps> = ({
 			id={`${containerId ? containerId : ""}`}
 			className={`${css.TextInputContainer}`}
 		>
-			<div className={`${css.TextInput} ${errors ? "invalid" : ""}`}>
-				<label className={isFocued ? "focused" : ""} htmlFor={props.id}>
+			<div className={`${css.TextInput}`}>
+				<label className={isFocued ? css.focused : ""} htmlFor={props.id}>
 					{props.label}
 				</label>
 				<textarea
