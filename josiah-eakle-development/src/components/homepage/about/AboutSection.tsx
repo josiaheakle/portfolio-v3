@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Section } from "../../section/Section";
+import { Section } from "../../ui/section/Section";
 
 import * as css from "./AboutSection.module.css";
 

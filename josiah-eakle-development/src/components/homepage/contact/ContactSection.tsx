@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useIsMobile } from "../../../hooks/ReactiveHooks";
-import { Section } from "../../section/Section";
+import { Section } from "../../ui/section/Section";
 import { Button } from "../../ui/buttons/Button";
 import { Card } from "../../ui/cards/Card";
 import { MailIcon } from "../../ui/icons/MailIcon";

@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { animated, useSpring } from "react-spring";
-import { Section } from "../../section/Section";
+import { Section } from "../../ui/section/Section";
 
 import * as css from "./Hero.module.css";
 
