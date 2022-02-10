@@ -9,7 +9,8 @@ interface AboutSectionProps {}
 const AboutSection: React.FC<AboutSectionProps> = ({}) => {
 	return (
 		<Section id="About" className={`${css.About}`}>
-			<h2>About Me</h2>
+			<span className={`${css.Subtitle}`}>My Skill and Experience</span>
+			<h2 className={`${css.title}`}>About Me</h2>
 			<SkillMenu
 				groups={[
 					{

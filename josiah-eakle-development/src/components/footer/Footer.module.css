@@ -1,0 +1,24 @@
+.Footer {
+	width: 80vw;
+	background-color: var(--dark);
+	padding: 1rem 10vw 0rem 10vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.Link {
+	color: var(--contrast);
+}
+
+.Text {
+	color: var(--white);
+	/* font-weight: bold; */
+	padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+	footer.Footer {
+		padding: 1rem;
+	}
+}

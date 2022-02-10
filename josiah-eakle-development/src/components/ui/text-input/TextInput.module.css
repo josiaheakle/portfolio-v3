@@ -55,14 +55,17 @@
 	padding-bottom: 0px;
 }
 
-.Input.focused {
+.Input:focus,
+.Input:hover {
 	outline-offset: 4px;
 }
 
 .TextInput > textarea {
-	resize: none;
+	resize: vertical;
 	padding-top: 1rem;
-	width: 24rem;
+	max-width: 24rem;
+	width: 20vw;
+	min-width: 10rem;
 	height: 100%;
 }
 
@@ -84,13 +87,6 @@
 	padding-top: 0.75rem;
 	padding-bottom: 0rem;
 	color: var(--primary-blue);
-}
-
-.TextInput > textarea {
-	resize: vertical;
-	height: 100px;
-	min-height: 80px;
-	max-height: 200px;
 }
 
 .TextInput > label.focused {

@@ -16,8 +16,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({}) => {
 	return (
 		<Section id="Contact">
 			<div className={`${css.Contact}`}>
-				<div className={css.Header}>
-					<span>
+				<div className={css.HeaderContainer}>
+					<span className={css.Header}>
 						<span className={css.Subtitle}>I would love to hear from you.</span>
 						<h2 className={css.Title}>Contact Me</h2>
 					</span>
@@ -30,8 +30,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({}) => {
 						</a>
 					</address>
 				</div>
-				<div className={css.FormContainer}>
-					<form className={css.Form}>
+				<form className={css.Form}>
+					<div className={css.FormContainer}>
 						<div className={`${css.TextContainer}`}>
 							<TextInput
 								className={css.TextInput}
@@ -58,9 +58,9 @@ const ContactSection: React.FC<ContactSectionProps> = ({}) => {
 							id="contact-text-area"
 							label="How can I help?"
 						/>
-						<Button id="contact-submit">Submit</Button>
-					</form>
-				</div>
+					</div>
+					<Button id="contact-submit">Submit</Button>
+				</form>
 			</div>
 		</Section>
 	);

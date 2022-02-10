@@ -55,9 +55,7 @@ export const TextInput: React.FC<TextInputProps> = (props) => {
 				<input
 					ref={inputRef}
 					{...props}
-					className={`${css.Input} ${props.className ? props.className : ""} ${
-						isFocued ? css.focused : ""
-					}`}
+					className={`${css.Input} ${props.className ? props.className : ""}`}
 					onChange={onChange}
 					onFocus={onFocus}
 					onBlur={onBlur}
