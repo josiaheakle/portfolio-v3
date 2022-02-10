@@ -16,8 +16,8 @@
 	align-items: center;
 	justify-content: space-between;
 
-	background-color: var(--transparent);
-	backdrop-filter: blur(5px);
+	background-color: var(--dark);
+	/* backdrop-filter: blur(5px); */
 
 	transition: height 250ms ease, background-color 250ms, transform 250ms;
 }
@@ -70,14 +70,14 @@
 	height: fit-content;
 	font-family: var(--header-font);
 	font-weight: bold;
-	color: var(--main);
+	color: var(--white);
 	font-size: var(--h4);
 	/* margin: 0 0 0.1rem 0; */
 }
 
 .HeadingBottom {
 	transition: height 200ms ease, opacity 200ms ease;
-	font-size: var(--small-font);
+	/* font-size: var(--small-font); */
 	color: var(--contrast);
 }
 

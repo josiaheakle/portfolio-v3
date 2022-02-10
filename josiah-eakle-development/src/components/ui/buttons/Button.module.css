@@ -1,14 +1,13 @@
 button.Button {
 	cursor: pointer;
 	font-family: var(--header-font);
-	outline: none;
 	border: 2px solid var(--primary-green);
 	padding: 0.75rem;
 	border-radius: 10px;
 	font-size: 1rem;
 	font-weight: bold;
 	transition: color 250ms, transform 250ms, background-color 250ms;
-	color: var(--primary-blue);
+	color: var(--contrast);
 	background-color: var(--white);
 	height: fit-content;
 	width: fit-content;

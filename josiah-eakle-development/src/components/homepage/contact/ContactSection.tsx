@@ -1,70 +1,67 @@
 import * as React from "react";
-import { useIsMobile } from "../../../hooks/ReactiveHooks";
+
 import { Section } from "../../ui/section/Section";
 import { Button } from "../../ui/buttons/Button";
 import { Card } from "../../ui/cards/Card";
-import { MailIcon } from "../../ui/icons/MailIcon";
-import { RemoteIcon } from "../../ui/icons/RemoteIcon";
 import { TextAreaInput } from "../../ui/text-input/TextAreaInput";
 import { TextInput } from "../../ui/text-input/TextInput";
+import { MailIcon } from "../../ui/icons/MailIcon";
+import { RemoteIcon } from "../../ui/icons/RemoteIcon";
 
-import "./Contact.css";
+import * as css from "./Contact.module.css";
 
 interface ContactSectionProps {}
 
 const ContactSection: React.FC<ContactSectionProps> = ({}) => {
-	const isMobile = useIsMobile();
 	return (
 		<Section id="Contact">
-			<Card id="ContactCard">
-				<div className="ContactHeader">
+			<div className={`${css.Contact}`}>
+				<div className={css.Header}>
 					<span>
-						<h2 className=" heading-top no-mar-top">Contact Me</h2>
-						<h5 className=" green-text heading-bottom">
-							I would love to hear from you.
-						</h5>
+						<span className={css.Subtitle}>I would love to hear from you.</span>
+						<h2 className={css.Title}>Contact Me</h2>
 					</span>
-					<div id="contact-info-container">
-						<address id="contact-info">
-							<a title="Call us!" href="tel:+8653217523">
-								<RemoteIcon className="contact-icon" width="1.8rem" />
-							</a>
-							<a
-								title="Send us an email!"
-								href="mailto:paul.eakle@driveinc.com"
-							>
-								<MailIcon className="contact-icon" width="1.8rem" />
-							</a>
-						</address>
-					</div>
+					<address className={css.ContactInfo}>
+						<a title="Call me!" href="tel:+">
+							<RemoteIcon className={css.Icon} />
+						</a>
+						<a title="Send me an email" href="mailto:dev@josiaheakle@gmail.com">
+							<MailIcon className={css.Icon} />
+						</a>
+					</address>
 				</div>
-				<div className="contact-container">
-					<form id="contact-form">
-						<div className={`${isMobile ? "flex-column" : "flex-row"}`}>
-							<div id="contact-text-column">
-								<TextInput
-									className="contact-text-input"
-									label="Name"
-								></TextInput>
-								<TextInput
-									className="contact-text-input"
-									type="email"
-									label="Email"
-								></TextInput>
-								{!isMobile ? (
-									<TextInput label="Phone Number"></TextInput>
-								) : null}
-							</div>
-							<TextAreaInput
-								containerId="contact-text-area-container"
-								id="contact-text-area"
-								label="How can I help?"
+				<div className={css.FormContainer}>
+					<form className={css.Form}>
+						<div className={`${css.TextContainer}`}>
+							<TextInput
+								className={css.TextInput}
+								label="Name"
+								name="name"
+								type="text"
+							/>
+							<TextInput
+								className={css.TextInput}
+								name="email"
+								type="email"
+								label="Email"
+							/>
+							<TextInput
+								className={`${css.TextInput}`}
+								label="Phone Number"
+								name="phone"
+								type="text"
 							/>
 						</div>
+						<TextAreaInput
+							className={css.TextArea}
+							containerId="contact-text-area-container"
+							id="contact-text-area"
+							label="How can I help?"
+						/>
 						<Button id="contact-submit">Submit</Button>
 					</form>
 				</div>
-			</Card>
+			</div>
 		</Section>
 	);
 };

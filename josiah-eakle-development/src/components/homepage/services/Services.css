@@ -197,10 +197,6 @@
 		align-items: center;
 	}
 
-	.ServiceTab {
-		border-radius: 10px;
-	}
-
 	.ServicesTabContainer > h3 {
 		color: var(--white);
 		text-align: center;
@@ -209,8 +205,10 @@
 	.ServicesTabContainer.hidden {
 		left: 100vw;
 	}
+
 	.ServiceTab {
 		width: 10rem;
+		border-radius: 10px;
 	}
 	.ServiceTab.selected {
 		width: 12rem;

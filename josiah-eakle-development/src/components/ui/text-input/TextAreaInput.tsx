@@ -60,6 +60,9 @@ export const TextAreaInput: React.FC<TextAreaInputProps> = ({
 				<textarea
 					ref={inputRef}
 					{...props}
+					className={`${css.Input} ${props.className ? props.className : ""} ${
+						isFocued ? css.focused : ""
+					}`}
 					onChange={onChange}
 					onFocus={onFocus}
 					onBlur={onBlur}

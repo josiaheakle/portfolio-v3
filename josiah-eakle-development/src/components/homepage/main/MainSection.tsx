@@ -1,6 +1,7 @@
 import * as React from "react";
 
-import { Hero } from "../hero/Hero";
+import { Hero } from "./hero/Hero";
+import { LearnMore } from "./LearnMore";
 
 import * as css from "./MainSection.module.css";
 
@@ -10,9 +11,10 @@ const MainSection: React.FC<MainSectionProps> = ({}) => {
 	return (
 		<main id="Main" className={css.Main}>
 			<Hero
-				title="My name is Josiah and I am a Full Stack Web Developer"
-				subtitle="Looking for web solutions?"
+				title="I create clean, secure web applications built with modern JavaScript frameworks, with a love for TypeScript and Linux."
+				subtitle="Hi, I am Josiah"
 			/>
+			<LearnMore />
 		</main>
 	);
 };

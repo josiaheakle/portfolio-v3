@@ -7,9 +7,5 @@
 	width: 100vw;
 	height: 100vh;
 	z-index: 5;
-}
-
-.Section > .heading {
 	color: var(--white);
-	z-index: 5;
 }

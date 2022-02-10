@@ -30,28 +30,33 @@
 	bottom: -12px;
 	cursor: unset;
 	transition: bottom 0.2s ease-out, font-size 0.2s, color;
-	font-family: var(--header-font);
+	/* font-family: var(--header-font); */
 	font-weight: bold;
-	color: var(--primary-blue);
+	color: var(--contrast);
 }
 
-.TextInput > input,
-.TextInput > textarea {
+.Input {
 	width: 10rem;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 	height: 28px;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
-	border: 2px solid var(--primary-green);
-	outline: none;
+	border: 1px solid var(--contrast);
+
+	outline: 1px solid var(--contrast);
+	outline-offset: -1px;
 	background-color: var(--white);
 	color: var(--blue);
 
-	transition: transform 250ms;
+	transition: outline-offset 100ms;
 	font-family: var(--body-font);
 	font-size: 1rem;
 	padding-top: 1rem;
 	padding-bottom: 0px;
+}
+
+.Input.focused {
+	outline-offset: 4px;
 }
 
 .TextInput > textarea {
@@ -86,10 +91,6 @@
 	height: 100px;
 	min-height: 80px;
 	max-height: 200px;
-}
-
-.TextInput > input:hover,
-.TextInput > textarea:hover {
 }
 
 .TextInput > label.focused {

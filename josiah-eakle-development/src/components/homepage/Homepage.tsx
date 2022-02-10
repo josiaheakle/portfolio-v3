@@ -3,7 +3,6 @@ import * as React from "react";
 
 // components
 import { MainSection } from "./main/MainSection";
-import { ServicesSection } from "./services/ServicesSection";
 import { ContactSection } from "./contact/ContactSection";
 import { Footer } from "../footer/Footer";
 import { Header } from "../header/Header";
@@ -11,7 +10,7 @@ import { AboutSection } from "./about/AboutSection";
 
 // css
 import * as css from "./Homepage.module.css";
-import { Hero } from "./hero/Hero";
+import { Hero } from "./main/hero/Hero";
 import { ServicesMenu } from "./services/ServicesMenu";
 
 interface HomepageProps {}
@@ -23,18 +22,14 @@ const Homepage: React.FC<HomepageProps> = ({}) => {
 				title="Josiah Eakle"
 				subtitle="Subtitle"
 				pages={[
-					{ title: "hello", elemId: "Hello" },
-					{ title: "hello", elemId: "Hello" },
-					{ title: "hello", elemId: "Hello" },
-					{ title: "hello", elemId: "Hello" },
+					{ title: "Home", elemId: "Hero" },
+					{ title: "About Me", elemId: "About" },
+					{ title: "My Projects", elemId: "Projects" },
+					{ title: "Contact Me", elemId: "Contact" },
 				]}
 			></Header>
-			<Hero
-				title="I create clean, secure web applications built with modern JavaScript frameworks, with a love for TypeScript and Linux."
-				subtitle="Hi, I am Josiah"
-			/>
+			<MainSection />
 			<AboutSection />
-			<ServicesSection />
 			<ContactSection />
 			<Footer />
 		</main>

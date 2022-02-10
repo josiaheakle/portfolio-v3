@@ -1,0 +1,184 @@
+.Skill {
+	color: var(--white);
+}
+
+.SkillTitle {
+}
+
+.SkillTech {
+	/* font-family: var(--header-font); */
+	color: var(--contrast);
+}
+
+.SkillTechList {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+}
+
+.SkillTechItem {
+	padding-right: 0.5rem;
+	color: var(--white);
+}
+
+.GroupTitle {
+	margin-top: 0;
+	align-self: center;
+}
+
+.SkillMenu {
+	background-color: var(--transparent);
+	pointer-events: auto;
+	align-items: flex-end;
+	position: relative;
+	transition: height 250ms, width 250ms;
+}
+
+.SkillListContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.SkillListContainer > div {
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;
+}
+
+.SkillTabContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: relative;
+	text-align: end;
+}
+
+.SkillTabContainer > h3 {
+	padding-left: 2rem;
+}
+
+.SkillList {
+	position: relative;
+	padding-left: 2rem;
+	width: 42vw;
+	height: 100%;
+	background-color: var(--dark);
+	border-radius: 2rem;
+	margin: 0;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-right: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/* overflow-y: scroll; */
+}
+
+.SkillTab {
+	cursor: pointer;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	background-color: var(--white);
+	border: none;
+	width: fit-content;
+	margin-bottom: 0.5rem;
+	padding: 1rem;
+	transition: padding 250ms, background-color 250ms, color 250ms, width 250ms,
+		transform 250ms;
+	/* font-family: var(--header-font); */
+	font-weight: bold;
+	font-size: 1.1rem;
+	color: var(--contrast);
+}
+
+.SkillTab:hover {
+	transform: scaleX(105%);
+	text-decoration: underline;
+}
+
+.SkillTab.selected {
+	color: var(--gray);
+	width: 18rem;
+}
+
+@media only screen and (min-width: 1024px) {
+	.SkillMenu.start {
+		width: fit-content;
+		height: fit-content;
+	}
+	.ribbon {
+		position: relative;
+		left: 3rem;
+		width: 15rem;
+		text-align: left;
+	}
+	.ribbon:before,
+	.ribbon:after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		border-bottom: 6px solid transparent;
+		filter: brightness(50%);
+	}
+
+	.ribbon:before {
+		right: 0;
+		border-left: 1rem solid var(--gray);
+	}
+
+	.ribbon.selected:before {
+		border-left: 1rem solid var(--gray);
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.SkillList {
+		position: absolute;
+		width: calc(85vw - 8rem);
+		height: calc(70vh - 8rem);
+		margin-inline: 0;
+		margin-block: 0;
+		padding: 2rem;
+	}
+
+	.SkillTab {
+		width: 10rem;
+		border-radius: 10px;
+	}
+	.SkillTab.selected {
+		width: 12rem;
+	}
+
+	.Skill {
+		flex-direction: column;
+		align-items: flex-start;
+		border-bottom: 1px solid var(--contrast);
+	}
+
+	.SkillTabContainer {
+		border-radius: 20px;
+		background-color: var(--primary-blue);
+		position: absolute;
+		width: calc(85vw - 8rem);
+		height: calc(70vh - 8rem);
+		bottom: 2rem;
+		left: 2rem;
+		padding: 2rem;
+		transition: left 250ms ease-out;
+		align-items: center;
+	}
+
+	.SkillTabContainer > h3 {
+		color: var(--white);
+		text-align: center;
+	}
+
+	.SkillTabContainer.hidden {
+		left: 100vw;
+	}
+}

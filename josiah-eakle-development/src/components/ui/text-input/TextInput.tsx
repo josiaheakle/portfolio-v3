@@ -47,11 +47,7 @@ export const TextInput: React.FC<TextInputProps> = (props) => {
 	}, [input]);
 
 	return (
-		<div
-			className={`${css.TextInputContainer} ${
-				props.className ? props.className : ""
-			}`}
-		>
+		<div className={`${css.TextInputContainer}`}>
 			<span className={`${css.TextInput} `}>
 				<label className={isFocued ? css.focused : ""} htmlFor={props.id}>
 					{props.label}
@@ -59,6 +55,9 @@ export const TextInput: React.FC<TextInputProps> = (props) => {
 				<input
 					ref={inputRef}
 					{...props}
+					className={`${css.Input} ${props.className ? props.className : ""} ${
+						isFocued ? css.focused : ""
+					}`}
 					onChange={onChange}
 					onFocus={onFocus}
 					onBlur={onBlur}

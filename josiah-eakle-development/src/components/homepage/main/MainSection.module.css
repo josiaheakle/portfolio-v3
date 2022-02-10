@@ -8,3 +8,34 @@
 	height: 100vh;
 	z-index: 5;
 }
+
+.Container {
+	position: absolute;
+	z-index: 5;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 4rem;
+	color: var(--white);
+	font-size: var(--h4);
+	font-weight: bold;
+	text-shadow: 1px 1px var(--dark);
+	cursor: pointer;
+	transition: font-size 250ms;
+}
+
+.Arrow {
+	width: 5rem;
+	height: 5rem;
+	transition: transform 250ms;
+}
+
+.Container:hover {
+	font-size: var(--h3);
+}
+
+.Container:hover .Arrow {
+	transform: scale(1.5);
+}
