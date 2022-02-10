@@ -13,9 +13,7 @@ const Skill: React.FC<SkillProps> = ({ title, tech }) => {
 		<div className={css.Skill}>
 			<h4 className={css.SkillTitle}>{title}</h4>
 			<ul className={`${css.SkillTech}`}>
-				{tech.map((t, i) => (
-					<li key={i}>{t}</li>
-				))}
+				{tech ? tech.map((t, i) => <li key={i}>{t}</li>) : null}
 			</ul>
 		</div>
 	);

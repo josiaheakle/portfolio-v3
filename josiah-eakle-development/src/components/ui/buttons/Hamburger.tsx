@@ -20,7 +20,6 @@ const Hamburger: React.FC<HamburgerProps> = ({ open, ...props }) => {
 				<div className={`${css.middle} ${open ? css.open : ""}`}></div>
 				<div className={`${css.bottom} ${open ? css.open : ""}`}></div>
 			</div>
-			{open ? <div className={`${css.OpenContainer}`}></div> : null}
 		</>
 	);
 };

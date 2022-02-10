@@ -1,2 +1,16 @@
 .About {
 }
+
+.Title {
+	margin: 0 0 1rem 0;
+}
+
+.Subtitle {
+	color: var(--contrast);
+	font-weight: bold;
+}
+
+.Title,
+.Subtitle {
+	/* align-self: flex-start; */
+}

@@ -1,12 +1,3 @@
-.OpenContainer {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: -1;
-}
-
 .Hamburger {
 	cursor: pointer;
 	border-radius: 0.5rem;
@@ -16,7 +7,7 @@
 
 .Hamburger > div {
 	transition: opacity 250ms, transform 250ms, background-color 250ms;
-	background-color: var(--main);
+	background-color: var(--white);
 
 	width: 1.5rem;
 	height: 0.25rem;

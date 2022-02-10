@@ -36,8 +36,8 @@
 		position: fixed;
 		margin-block-start: 0;
 		margin-block-end: 0;
-		height: 100vh;
-		/* margin-top: ; */
+		height: 90vh;
+		padding-top: 10vh;
 		width: 100vw;
 		top: 0;
 		left: -100vw;
@@ -45,7 +45,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-evenly;
-		background-color: var(--gray);
+		background-color: var(--dark);
 		/* backdrop-filter: blur(); */
 		transition: transform 200ms;
 	}
@@ -56,5 +56,6 @@
 
 	.Navbar > li {
 		font-size: large;
+		font-weight: bold;
 	}
 }

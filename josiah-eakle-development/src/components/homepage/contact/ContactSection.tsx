@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { Section } from "../../ui/section/Section";
 import { Button } from "../../ui/buttons/Button";
-import { Card } from "../../ui/cards/Card";
 import { TextAreaInput } from "../../ui/text-input/TextAreaInput";
 import { TextInput } from "../../ui/text-input/TextInput";
 import { MailIcon } from "../../ui/icons/MailIcon";
@@ -21,7 +20,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({}) => {
 						<span className={css.Subtitle}>I would love to hear from you.</span>
 						<h2 className={css.Title}>Contact Me</h2>
 					</span>
-					<address className={css.ContactInfo}>
+					<address className={`${css.ContactInfo}`}>
 						<a title="Call me!" href="tel:+">
 							<RemoteIcon className={css.Icon} />
 						</a>

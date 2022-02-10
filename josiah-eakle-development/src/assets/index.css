@@ -2,58 +2,24 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 
-	--header-height: 80px;
-	--header-large-height: 120px;
-
-	/* 
-
---blue-ryb: #324EEAff;
---dark-cornflower-blue: #3A447Aff;
---xiketic: #0D1021ff;
---white: #FFFFFFff;
---dim-gray: #656565ff;
-
-
-
-		
-	*/
-
 	--bg-main: #808080;
 	--bg-dark: #000000;
 	--bg-cont: #ffffff;
 
 	--main: #3a447aff;
-	--contrast: #324eeaff;
+	--contrast: #316deb;
 	--dark: #0d1021ff;
 	--gray: #656565ff;
 	--white: #ffffffff;
-	--transparent: #ffffff88;
+	--transparent: #4e4e4e99;
 
-	--transparent: #ffffff88;
-	--transparent: #ffffff88;
-	--transparent: #ffffff88;
-
-	--transparent-yellow: #fbff0036;
-	--transparent-blue: #0026ff36;
-	--transparent-green: #33ff0036;
+	--header-height: 80px;
+	--header-large-height: 120px;
 
 	--h3: 1.728rem;
 	--h4: 1.44rem;
 	--small-font: 0.833rem;
 	--blur: 0.5rem;
-
-	/* --contrast-blue: #a0474a;
-	--primary-blue: #316985;
-	--primary-green: #00724c;
-	--contrast-blue-trans: #a0474acc;
-	--primary-blue-trans: #316985cc;
-	--primary-green-trans: #00724ccc;
-	--white: #effbff;
-	--transparent-white: #effbffcc;
-	--primary-grey: #9b9b9b;
-
-	--black: #101427;
-	--transparent-black: #0a1138; */
 
 	--header-font: "IBM Plex Sans Thai Looped", sans-serif;
 	--body-font: "Open Sans", sans-serif;
@@ -119,5 +85,21 @@ small {
 @media only screen and (max-width: 1023px) {
 	body {
 		--header-height: 80px;
+	}
+
+	h1 {
+		font-size: calc(0.8 * 2.488rem);
+	}
+	h2 {
+		font-size: calc(0.8 * 2.074rem);
+	}
+	h3 {
+		font-size: calc(0.8 * 1.728rem);
+	}
+	h4 {
+		font-size: calc(0.8 * 1.44rem);
+	}
+	h5 {
+		font-size: calc(0.8 * 1.1rem);
 	}
 }

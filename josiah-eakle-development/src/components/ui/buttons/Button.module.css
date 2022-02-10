@@ -7,19 +7,16 @@
 	padding: 0.5rem 0.75rem;
 	/* font-size: 1rem; */
 	font-weight: bold;
-	transition: color 250ms, transform 250ms, background-color 250ms,
-		outline-offset 250ms;
+	transition: outline-offset 100ms;
 	color: var(--contrast);
 	background-color: var(--white);
 	height: fit-content;
 	width: fit-content;
+	border-radius: 4px;
 }
 
 .Button:hover,
-.Button:focus {
-	background-color: var(--dark);
-	color: var(--white);
-	transform: scale(110%);
+.Button:focus-visible {
 	outline-offset: 4px;
 }
 

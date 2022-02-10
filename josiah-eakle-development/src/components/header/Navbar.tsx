@@ -52,7 +52,6 @@ export const Navbar: React.FC<NavbarProps> = ({ links, setOpen }) => {
 						</a>
 					</li>
 				))}
-				<Button>Call Me</Button>
 			</ul>
 			<Hamburger
 				className={`${css.MobileButton}`}

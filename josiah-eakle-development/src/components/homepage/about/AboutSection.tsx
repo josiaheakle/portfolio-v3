@@ -10,7 +10,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({}) => {
 	return (
 		<Section id="About" className={`${css.About}`}>
 			<span className={`${css.Subtitle}`}>My Skill and Experience</span>
-			<h2 className={`${css.title}`}>About Me</h2>
+			<h2 className={`${css.Title}`}>About Me</h2>
 			<SkillMenu
 				groups={[
 					{

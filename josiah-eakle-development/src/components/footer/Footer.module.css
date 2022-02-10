@@ -1,6 +1,7 @@
 .Footer {
 	width: 80vw;
-	background-color: var(--dark);
+	background-color: var(--transparent);
+	backdrop-filter: blur(2rem);
 	padding: 1rem 10vw 0rem 10vw;
 	display: flex;
 	justify-content: space-between;

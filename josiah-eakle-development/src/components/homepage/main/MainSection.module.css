@@ -12,12 +12,11 @@
 .Container {
 	position: absolute;
 	z-index: 5;
-	bottom: 0;
+	bottom: 4rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 4rem;
 	color: var(--white);
 	font-size: var(--h4);
 	font-weight: bold;
@@ -27,8 +26,8 @@
 }
 
 .Arrow {
-	width: 5rem;
-	height: 5rem;
+	width: 4.5rem;
+	height: 4.5rem;
 	transition: transform 250ms;
 }
 
@@ -38,4 +37,16 @@
 
 .Container:hover .Arrow {
 	transform: scale(1.5);
+}
+
+@media only screen and (max-width: 1023px) {
+	.Container {
+		bottom: 2rem;
+		font-size: var(--small-font);
+	}
+
+	.Arrow {
+		width: 3rem;
+		height: 3rem;
+	}
 }

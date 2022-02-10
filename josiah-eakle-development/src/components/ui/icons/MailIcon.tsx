@@ -6,7 +6,8 @@ const MailIcon: React.FC<MailIconProps> = (props) => {
 	return (
 		<svg
 			{...props}
-			width="1.8rem"
+			width="48px"
+			height="48px"
 			viewBox="0 0 67 48"
 			xmlns="http://www.w3.org/2000/svg"
 		>
