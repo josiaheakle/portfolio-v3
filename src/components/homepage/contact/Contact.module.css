@@ -90,8 +90,8 @@
 	.Contact {
 		width: 80vw;
 		max-width: 20rem;
-		max-height: 75vh;
 		height: fit-content;
+		/* max-height: 75vh; */
 		padding: 1rem;
 		justify-content: space-between;
 	}
