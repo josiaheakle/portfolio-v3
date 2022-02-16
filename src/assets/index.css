@@ -26,6 +26,8 @@ body {
 	--body-font: "Open Sans", sans-serif;
 	--dsf-font: "Alfa Slab One", cursive;
 
+	background-color: var(--dark);
+
 	font-family: var(--body-font);
 	font-weight: 400;
 	line-height: 1.5;
