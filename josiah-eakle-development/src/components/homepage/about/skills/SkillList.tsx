@@ -35,20 +35,22 @@ const SkillList: React.FC<SkillListProps> = ({
 								<p key={i}>{d}</p>
 							))}
 						</div>
-						{skills ? (
-							<div className={`${css.SkillTech}`}>
-								<hr className={`${css.Line}`} />
-								<h4 className={`${css.SkillTechHeader}`}>Related Tech</h4>
-								<ul className={`${css.SkillTechList}`}>
-									{skills.map((s, i) => (
-										<li className={`${css.SkillTechItem}`} key={i}>
-											{s}
-											{i < skills.length - 1 ? "," : ""}
-										</li>
-									))}
-								</ul>
-							</div>
-						) : null}
+						<div className={`${css.SkillTech}`}>
+							{skills ? (
+								<>
+									<hr className={`${css.Line}`} />
+									<h4 className={`${css.SkillTechHeader}`}>Related Tech</h4>
+									<ul className={`${css.SkillTechList}`}>
+										{skills.map((s, i) => (
+											<li className={`${css.SkillTechItem}`} key={i}>
+												{s}
+												{i < skills.length - 1 ? "," : ""}
+											</li>
+										))}
+									</ul>
+								</>
+							) : null}
+						</div>
 					</>
 				) : null}
 			</div>

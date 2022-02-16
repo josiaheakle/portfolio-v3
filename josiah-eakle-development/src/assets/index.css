@@ -18,11 +18,13 @@ body {
 
 	--h3: 1.728rem;
 	--h4: 1.44rem;
+	--h5: 1.1rem;
 	--small-font: 0.833rem;
 	--blur: 0.5rem;
 
 	--header-font: "IBM Plex Sans Thai Looped", sans-serif;
 	--body-font: "Open Sans", sans-serif;
+	--dsf-font: "Alfa Slab One", cursive;
 
 	font-family: var(--body-font);
 	font-weight: 400;
@@ -36,7 +38,7 @@ html {
 
 canvas {
 	position: fixed;
-	background-color: transparent;
+	background-color: var(--dark);
 	top: 0;
 	left: 0;
 	z-index: -100;

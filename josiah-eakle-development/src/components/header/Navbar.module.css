@@ -12,6 +12,8 @@
 
 .Navbar > li > a {
 	/* font-family: var(--) */
+	font-size: var(--h5);
+	font-weight: bold;
 	text-decoration: none;
 	color: var(--contrast);
 }
@@ -48,6 +50,12 @@
 		background-color: var(--dark);
 		/* backdrop-filter: blur(); */
 		transition: transform 200ms;
+	}
+
+	.Navbar > li > a {
+		/* font-family: var(--) */
+		text-decoration: none;
+		color: var(--white);
 	}
 
 	.Navbar.open {

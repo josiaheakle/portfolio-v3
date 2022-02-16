@@ -1,12 +1,10 @@
 .Button {
 	cursor: pointer;
-	font-family: var(--header-font);
 	border: 1px solid var(--contrast);
 	outline: 1px solid var(--contrast);
 	outline-offset: -1px;
 	padding: 0.5rem 0.75rem;
-	/* font-size: 1rem; */
-	font-weight: bold;
+	font-size: 1rem;
 	transition: outline-offset 100ms;
 	color: var(--contrast);
 	background-color: var(--white);

@@ -29,6 +29,7 @@
 	margin: 0;
 }
 .Subtitle {
+	font-size: var(--h5);
 	color: var(--contrast);
 	font-weight: bold;
 }

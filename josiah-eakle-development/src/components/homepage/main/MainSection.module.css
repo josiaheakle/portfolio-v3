@@ -18,6 +18,8 @@
 	align-items: center;
 	justify-content: center;
 	color: var(--white);
+	/* color: var(--contrast); */
+
 	font-size: var(--h4);
 	font-weight: bold;
 	text-shadow: 1px 1px var(--dark);
@@ -45,8 +47,16 @@
 		font-size: var(--small-font);
 	}
 
+	.Container:hover {
+		font-size: 1rem;
+	}
+
 	.Arrow {
 		width: 3rem;
 		height: 3rem;
+	}
+
+	.Container:hover .Arrow {
+		transform: scale(1.2);
 	}
 }

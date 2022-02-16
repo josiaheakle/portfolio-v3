@@ -36,7 +36,7 @@ export default class Scene {
 		this.updateCameraRotationZ(0);
 		this.updateCameraRotationY(0);
 		this.createCube();
-		this.createPlane(80, 80);
+		this.createPlane(80, 50);
 		this.createLight();
 		this.animate();
 	}
@@ -89,7 +89,7 @@ export default class Scene {
 		const light = new THREE.PointLight();
 		light.castShadow = true;
 		light.position.set(50, 20, 50);
-		light.intensity = 2;
+		light.intensity = 1;
 		this.scene.add(light);
 	}
 

@@ -1,0 +1,23 @@
+.Section {
+	padding-top: 8rem;
+}
+
+.Title {
+	margin-top: 0;
+	text-align: center;
+}
+
+.Subtitle {
+	font-size: var(--h5);
+	color: var(--contrast);
+	font-weight: bold;
+}
+
+.Projects {
+	padding: 0 5vw;
+	max-width: 90rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-flow: wrap;
+}

@@ -42,7 +42,7 @@ module.exports = {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
                 fonts: [
-                    `IBM Plex Sans Thai Looped`, `Open Sans`
+                    `IBM Plex Sans Thai Looped`, `Open Sans`, `Alfa Slab One`
                 ],
             }
         }

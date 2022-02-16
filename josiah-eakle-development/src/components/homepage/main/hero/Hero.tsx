@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { animated, useSpring } from "react-spring";
+import { useOpacityAnim } from "../../../../hooks/AnimHooks";
 import { Section } from "../../../ui/section/Section";
 
 import * as css from "./Hero.module.css";
@@ -16,18 +17,8 @@ const Hero: React.FC<HeroProps> = ({
 	className,
 	...props
 }) => {
-	const subtitleProps = useSpring({
-		to: { opacity: 1 },
-		from: { opacity: 0 },
-		delay: 250,
-	});
-
-	const titleProps = useSpring({
-		to: { opacity: 1 },
-		from: { opacity: 0 },
-		delay: 1000,
-		config: { duration: 500 },
-	});
+	const subtitleProps = useOpacityAnim(250);
+	const titleProps = useOpacityAnim(1250);
 
 	return (
 		<Section
@@ -35,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({
 			className={`${css.Hero} ${className ? className : ""}`}
 			{...props}
 		>
-			<div className={`${css.HeroBg}`}>
+			<div>
 				<animated.span
 					className={`${css.Subtitle}`}
 					style={subtitleProps}

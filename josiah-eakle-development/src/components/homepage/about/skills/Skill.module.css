@@ -89,8 +89,9 @@
 	position: relative;
 	padding-left: 1rem;
 	width: 40vw;
+
 	height: 100%;
-	border-radius: 2rem;
+	border-radius: 4px;
 	margin: 0;
 	display: flex;
 	flex-direction: column;
@@ -170,25 +171,55 @@
 }
 
 @media only screen and (max-width: 1023px) {
+	.Header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.SkillListContainer {
+		height: calc(100% - 4rem);
+		width: 100%;
+	}
+
+	.SkillContainer {
+		width: 100%;
+	}
+
 	.SkillMenu {
-		width: 80wv;
+		padding: 1rem;
+		width: 80vw;
+		min-height: 70vh;
+		height: fit-content;
+		/* overflow: hidden; */
+		transition: width 250ms, height 250ms;
+	}
+	.SkillMenu.start {
+		width: 16rem;
+		height: 16rem;
 	}
 
 	.SkillList {
-		position: absolute;
-		width: calc(85vw - 8rem);
-		height: calc(70vh - 8rem);
-		margin-inline: 0;
-		margin-block: 0;
-		padding: 2rem;
+		/* height: calc(70vh - 4rem); */
+		padding: 0;
+		width: 100%;
+		/* width: fit-content; */
+		/* overflow-y: scroll; */
+		padding-right: 1rem;
 	}
 
 	.SkillTab {
 		width: 10rem;
 		border-radius: 10px;
+		margin: 0.25rem 0;
+		pointer-events: initial;
 	}
 	.SkillTab.selected {
 		width: 12rem;
+	}
+
+	.SkillTechList {
+		flex-wrap: wrap;
 	}
 
 	.Skill {
@@ -198,16 +229,29 @@
 	}
 
 	.SkillTabContainer {
-		border-radius: 20px;
-		background-color: var(--primary-blue);
+		/* transition: ; */
+		border-radius: 4px;
 		position: absolute;
-		width: calc(85vw - 8rem);
-		height: calc(70vh - 8rem);
-		bottom: 2rem;
-		left: 2rem;
-		padding: 2rem;
-		transition: left 250ms ease-out;
+		left: 0;
+		bottom: 0;
+		width: calc(80vw + 2rem);
+		height: calc(70vh + 2rem);
+		transition: width 250ms, height 250ms, transform 250ms ease-out;
 		align-items: center;
+		pointer-events: none;
+	}
+
+	.SkillTabContainer.start {
+		width: 18rem;
+		height: 18rem;
+	}
+
+	.SkillContainer {
+		transition: opacity 250ms;
+	}
+
+	.SkillContainer.hidden {
+		opacity: 0;
 	}
 
 	.SkillTabContainer > h3 {
@@ -216,6 +260,6 @@
 	}
 
 	.SkillTabContainer.hidden {
-		left: 100vw;
+		transform: translateX(100%);
 	}
 }

@@ -78,6 +78,7 @@
 .HeadingBottom {
 	transition: height 200ms ease, opacity 200ms ease;
 	/* font-size: var(--small-font); */
+	font-weight: bold;
 	color: var(--contrast);
 }
 
@@ -89,10 +90,9 @@
 @media only screen and (max-width: 1023px) {
 	.Header {
 		max-height: var(--header-height);
+		background-color: var(--dark);
 		padding: 1rem 5vw 1rem 5vw;
 		width: 90vw;
-		background-color: var(--transparent);
-		backdrop-filter: blur(5px);
 	}
 
 	.Header.mobile-open {
@@ -103,7 +103,6 @@
 		max-height: var(--header-height);
 		padding: 1rem 5vw 1rem 5vw;
 		width: 90vw;
-		background-color: var(--transparent);
 	}
 
 	.HeadingTop {

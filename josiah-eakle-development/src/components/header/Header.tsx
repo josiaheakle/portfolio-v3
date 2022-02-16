@@ -12,6 +12,7 @@ import { useScrollYPosition } from "react-use-scroll-position";
 // assets
 import LogoIcon from "../../assets/icon.png";
 import * as css from "./Header.module.css";
+import { useOpacityAnim } from "../../hooks/AnimHooks";
 
 // types
 interface HeaderProps {
@@ -55,26 +56,14 @@ export const Header: React.FC<HeaderProps> = ({
 		setLastScroll(scrollY);
 	}, [scrollY]);
 
-	const headerAnimMobile = useSpring({
-		to: { opacity: 1 },
-		from: { opacity: 0 },
-		delay: 1800,
-		config: { duration: 500 },
-	});
-
-	const headerAnim = useSpring({
-		to: { opacity: 1 },
-		from: { opacity: 0 },
-		delay: 3300,
-		config: { duration: 500 },
-	});
+	const headerAnim = useOpacityAnim(2500, true);
 
 	return (
 		<animated.header
-			style={isMobile ? headerAnimMobile : headerAnim}
+			style={headerAnim}
 			className={`${css.Header}  ${isMobile ? css.mobile : ""} ${
 				isMobileHidden || hidden ? css.hidden : ""
-			} ${!isSmall ? css.large : ""} ${isOpen ? "mobile-open" : ""}`}
+			} ${!isSmall ? css.large : ""}`}
 		>
 			<a className={`${css.HeaderContainer}`} href="/">
 				<img
@@ -86,7 +75,7 @@ export const Header: React.FC<HeaderProps> = ({
 					<span className={`${css.HeadingTop}`}>{title}</span>
 					<span
 						className={`${css.HeadingBottom} ${
-							isSmall && !isMobile ? "small" : ""
+							isSmall && !isMobile ? css.small : ""
 						}`}
 					>
 						{subtitle}

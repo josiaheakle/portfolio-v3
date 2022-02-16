@@ -4,9 +4,6 @@ import { Homepage } from "../components/homepage/Homepage";
 
 import "../assets/index.css";
 import Background from "../components/ui/backgrounds/Background";
-import { Header } from "../components/header/Header";
-import { AboutSection } from "../components/homepage/about/AboutSection";
-import { ServicesMenu } from "../components/homepage/services/ServicesMenu";
 
 interface IndexProps {}
 

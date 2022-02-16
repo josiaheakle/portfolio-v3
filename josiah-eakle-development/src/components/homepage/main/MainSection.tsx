@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useOpacityAnim } from "../../../hooks/AnimHooks";
 
 import { Hero } from "./hero/Hero";
 import { LearnMore } from "./LearnMore";

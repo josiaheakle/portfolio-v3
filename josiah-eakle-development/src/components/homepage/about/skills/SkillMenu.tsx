@@ -9,7 +9,6 @@ import { useIsMobile } from "../../../../hooks/ReactiveHooks";
 import { Group } from "../../../../types/Skill.type";
 
 import * as css from "./Skill.module.css";
-import { group } from "console";
 
 interface SkillMenuProps {
 	groups: Array<Group>;
@@ -50,7 +49,11 @@ const SkillMenu: React.FC<SkillMenuProps> = ({ groups }) => {
 					/>
 				</div>
 			</div>
-			<div className={`${css.SkillTabContainer} ${hideTabs ? css.hidden : ""}`}>
+			<div
+				className={`${css.SkillTabContainer} ${
+					activeList === -1 ? css.start : ""
+				} ${hideTabs ? css.hidden : ""}`}
+			>
 				{groups.map((g, i) => (
 					<SkillTab
 						key={i}

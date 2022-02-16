@@ -6,11 +6,11 @@
 }
 
 .Subtitle {
+	font-size: var(--h5);
 	color: var(--contrast);
 	font-weight: bold;
 }
 
 .Title,
 .Subtitle {
-	/* align-self: flex-start; */
 }

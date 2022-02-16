@@ -18,8 +18,11 @@
 	padding-bottom: 1rem;
 }
 
-@media only screen and (max-width: 1024px) {
-	footer.Footer {
-		padding: 1rem;
+@media only screen and (max-width: 1023px) {
+	.Footer {
+		width: 90vw;
+		padding: 1rem 5vw 0rem 5vw;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 }

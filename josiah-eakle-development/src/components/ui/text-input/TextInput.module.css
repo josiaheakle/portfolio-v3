@@ -30,7 +30,6 @@
 	cursor: unset;
 	transition: bottom 0.2s ease-out, font-size 0.2s, color;
 	/* font-family: var(--header-font); */
-	font-weight: bold;
 	color: var(--contrast);
 }
 
