@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { useIsMobile } from "../../../hooks/ReactiveHooks";
 
 export default class Scene {
 	private scene: THREE.Scene;
@@ -31,18 +32,23 @@ export default class Scene {
 	}
 
 	start() {
+		const isMobile = window.innerWidth < 1024 ? true : false;
 		this.updateCameraPosition(0, 10, 0);
 		this.updateCameraRotationX(0);
 		this.updateCameraRotationZ(0);
 		this.updateCameraRotationY(0);
 		this.createCube();
-		this.createPlane(80, 50);
+		if (isMobile) {
+			this.createPlane(40, 40);
+		} else {
+			this.createPlane(60, 40);
+		}
 		this.createLight();
 		this.animate();
 	}
 
 	initFog() {
-		this.fog = new THREE.Fog(this.backgroundColor, 0.1, 50);
+		this.fog = new THREE.Fog(this.backgroundColor, 0.1, 35);
 		this.scene.fog = this.fog;
 	}
 
