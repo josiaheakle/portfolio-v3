@@ -8,8 +8,10 @@ import Background from "../components/ui/backgrounds/Background";
 interface IndexProps {}
 
 const Index: React.FC<IndexProps> = ({}) => {
-	const background = new Background(0x808080, 0xffffff, 0x0d1021);
-	background.start();
+	React.useEffect(() => {
+		const background = new Background(0x808080, 0xffffff, 0x0d1021);
+		background.start();
+	}, []);
 
 	return <Homepage />;
 };
