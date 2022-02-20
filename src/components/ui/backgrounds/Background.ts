@@ -33,15 +33,15 @@ export default class Scene {
 
 	start() {
 		const isMobile = window.innerWidth < 1024 ? true : false;
-		this.updateCameraPosition(0, 10, 0);
+		this.updateCameraPosition(0, 10, 20);
 		this.updateCameraRotationX(0);
 		this.updateCameraRotationZ(0);
 		this.updateCameraRotationY(0);
 		this.createCube();
 		if (isMobile) {
-			this.createPlane(40, 40);
+			this.createPlane(10, 20);
 		} else {
-			this.createPlane(60, 40);
+			this.createPlane(20, 20);
 		}
 		this.createLight();
 		this.animate();
@@ -85,6 +85,18 @@ export default class Scene {
 		window.addEventListener("resize", (e) => this.updateWindowSize(e));
 	}
 
+	initScrollAnim() {
+		window.addEventListener("scroll", (e) => this.updateScrollPos(e));
+	}
+
+	updateScrollPos(event: Event) {
+		this.cubes.forEach((cube, i) => {
+			cube.position.y = Math.sin(
+				window.scrollY / 100 + cube.position.x / 16 + cube.position.z / 12
+			);
+		});
+	}
+
 	updateWindowSize(event: UIEvent) {
 		this.camera.aspect = window.innerWidth / window.innerHeight;
 		this.camera.updateProjectionMatrix();
@@ -113,12 +125,12 @@ export default class Scene {
 	createPlane(width: number, height: number) {
 		for (let x = -(width / 2); x < width / 2; x++) {
 			for (let y = -height / 2; y < height / 2; y++) {
-				const geometry = new THREE.BoxGeometry(1, 10, 1);
+				const geometry = new THREE.BoxGeometry(4, 10, 4);
 				const material = new THREE.MeshStandardMaterial({
 					color: this.mainColor,
 				});
 				const box = new THREE.Mesh(geometry, material);
-				box.position.set(x * 1.5, 0, y * 1.5);
+				box.position.set(x * 5, 0, y * 5);
 				box.castShadow = true;
 				this.scene.add(box);
 				this.cubes.push(box);
@@ -151,9 +163,12 @@ export default class Scene {
 					cube.material.color.set(this.mainColor);
 				}, 500);
 			}
-			cube.position.y = Math.sin(
-				(frame || 0) / 600 + cube.position.x / 16 + cube.position.z / 12
-			);
+
+			this.cubes.forEach((cube, i) => {
+				cube.position.y = Math.sin(
+					(frame || 0) / 600 + cube.position.x / 16 + cube.position.z / 12
+				);
+			});
 		});
 		this.renderer.render(this.scene, this.camera);
 	}

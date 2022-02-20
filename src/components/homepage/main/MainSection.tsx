@@ -12,8 +12,8 @@ const MainSection: React.FC<MainSectionProps> = ({}) => {
 	return (
 		<main id="Main" className={css.Main}>
 			<Hero
-				title="I create clean, secure web applications built with modern JavaScript frameworks, with a love for TypeScript and Linux."
-				subtitle="Hi, I am Josiah"
+				subtitle="Hi, I'm Josiah"
+				title="I create clean, secure web applications built with modern JavaScript frameworks, currently focused on React and TypeScript."
 			/>
 			<LearnMore />
 		</main>
