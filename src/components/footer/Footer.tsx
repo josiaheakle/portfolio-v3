@@ -2,19 +2,42 @@ import * as React from "react";
 
 import * as css from "./Footer.module.css";
 
+import JEIcon from "../../assets/icon.png";
+import { GitHubIcon } from "../ui/icons/GitHubIcon";
+import { TwitterIcon } from "../ui/icons/TwitterIcon";
+import { LinkedInIcon } from "../ui/icons/LinkedInIcon";
+
 interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = ({}) => {
 	return (
 		<footer className={css.Footer}>
-			<span id="brand-copyright" className={css.Text}>
-				© 2022 Josiah Eakle Development.
-				<br /> All Rights Reserved.
+			<img className={`${css.Icon}`} src={JEIcon}></img>
+
+			<span className={css.Text}>
+				Designed, developed and deployed by Josiah Eakle.
 			</span>
-			<span id="created-by" className={css.Text}>
-				Website created by{" "}
-				<a className={css.Link} href="josiaheakle.com">
-					Josiah Eakle
+			<span className={`${css.Links}`}>
+				<a
+					title="Github Profile"
+					className="my-link"
+					href="https://github.com/josiaheakle"
+				>
+					<GitHubIcon className={`${css.LinkIcon}`} fill="var(--white)" />
+				</a>
+				<a
+					title="LinkedIn Profile"
+					className="my-link"
+					href="https://www.linkedin.com/in/josiah-eakle-10a7a6204/"
+				>
+					<LinkedInIcon className={`${css.LinkIcon}`} fill="var(--white)" />
+				</a>
+				<a
+					title="Twitter Profile"
+					className="my-link"
+					href="https://twitter.com/JosiahEakle"
+				>
+					<TwitterIcon className={`${css.LinkIcon}`} fill="var(--white)" />
 				</a>
 			</span>
 		</footer>

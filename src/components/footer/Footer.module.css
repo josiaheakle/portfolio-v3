@@ -1,20 +1,29 @@
 .Footer {
 	width: 80vw;
-	background-color: var(--transparent);
+	height: 40vh;
+	background-color: var(--dark);
 	backdrop-filter: blur(2rem);
 	padding: 1rem 10vw 0rem 10vw;
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
-.Link {
-	color: var(--contrast);
+.Icon {
+	width: 4rem;
+	height: 4rem;
+}
+
+.LinkIcon {
+	width: 2rem;
+	height: auto;
+	margin: 0.5rem;
 }
 
 .Text {
 	color: var(--white);
-	/* font-weight: bold; */
+	text-align: center;
 	padding-bottom: 1rem;
 }
 
@@ -22,7 +31,5 @@
 	.Footer {
 		width: 90vw;
 		padding: 1rem 5vw 0rem 5vw;
-		flex-direction: column;
-		align-items: flex-start;
 	}
 }
