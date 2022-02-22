@@ -17,24 +17,24 @@ const Footer: React.FC<FooterProps> = ({}) => {
 			<span className={css.Text}>
 				Designed, developed and deployed by Josiah Eakle.
 			</span>
-			<span className={`${css.Links}`}>
+			<span>
 				<a
 					title="Github Profile"
-					className="my-link"
+					className={css.Link}
 					href="https://github.com/josiaheakle"
 				>
 					<GitHubIcon className={`${css.LinkIcon}`} fill="var(--white)" />
 				</a>
 				<a
 					title="LinkedIn Profile"
-					className="my-link"
+					className={css.Link}
 					href="https://www.linkedin.com/in/josiah-eakle-10a7a6204/"
 				>
 					<LinkedInIcon className={`${css.LinkIcon}`} fill="var(--white)" />
 				</a>
 				<a
 					title="Twitter Profile"
-					className="my-link"
+					className={css.Link}
 					href="https://twitter.com/JosiahEakle"
 				>
 					<TwitterIcon className={`${css.LinkIcon}`} fill="var(--white)" />

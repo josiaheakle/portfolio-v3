@@ -12,6 +12,7 @@ import { AboutSection } from "./about/AboutSection";
 
 // assets
 import * as css from "./Homepage.module.css";
+import JELogo from "../../assets/icon.png";
 import ForAllLogo from "../../assets/project-icons/ForAllTn-Logo.png";
 import HHRLogo from "../../assets/project-icons/HHR-Logo.png";
 import EBLogo from "../../assets/project-icons/EB-Logo.png";
@@ -47,6 +48,12 @@ const Homepage: React.FC<HomepageProps> = ({}) => {
 					lang: "en",
 				}}
 			>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+				/>
+				<meta property="og:image" content={JELogo} />
+				<link rel="canonical" href="https://josiaheakle.com" />
 				<meta
 					name="description"
 					content={

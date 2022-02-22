@@ -15,7 +15,14 @@
 	height: 4rem;
 }
 
+.Link:hover .LinkIcon,
+.Link:focus-visible .LinkIcon {
+	transform: scale(1.5);
+	fill: var(--contrast);
+}
+
 .LinkIcon {
+	transition: transform 250ms, fill 250ms;
 	width: 2rem;
 	height: auto;
 	margin: 0.5rem;
